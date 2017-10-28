@@ -1,0 +1,14 @@
+{
+  "name": "expressjs",
+  "version": "1.0.0",
+  "description": "Jeonju-North Jeolla KOTESOL Regional Conference website",
+  "main": "app/app.js",
+  "scripts": {
+    "start": "node app/app.js"
+  },
+  "author": "Aaron Snowberger",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
