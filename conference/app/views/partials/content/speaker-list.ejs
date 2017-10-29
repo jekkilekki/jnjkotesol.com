@@ -1,18 +1,51 @@
+<div class="svg-container map-svg svg-block">
+  <% include ../template/svgslant.ejs %>
+</div>
+
 <div class="container">
-    <h2 class="section-title">Speakers</h2>
+    <article>
+    <h2 class="section-title">More Speakers</h2>
 
     <div class="speaker-list">
+        <div class="grid">
 
-        <% speakers.forEach( function( speaker ) { %>
-        <div class="speaker">
+        <% listSpeakers.forEach( function( speaker ) { %>
+        <!-- <div class="speaker">
             <figure class="speaker-img">
                 <div style="background-image: url(https://media.licdn.com/media/AAEAAQAAAAAAAATqAAAAJDMwYTllZTg4LTZhY2EtNGUyYS05NTZlLTdlOGNmMmUxZDhiNg.jpg)"></div>
             </figure>
             <p class="speaker-name"><a href="/speakers/<%= speaker.shortname %>"><%= speaker.name %></a></p>
             <p class="speaker-affiliation"><%= speaker.affiliation %></p>
             <p class="speaker-session"><strong>Talk / </strong><a href="/talks/<%= speaker.title %>"><%= speaker.title %></a></p>
+        </div> -->
+
+        <div class="grid-item photo">
+            <div class="grid-inner">
+                <figure  class="diamonds-item photo rhombus bg-primary">
+                    <img class="speaker-img" src="/img/speakers/<%= speaker.img %>">
+                </figure>
+
+                <% if ( pageID == 'home' ) { %>
+                <div class="speaker-meta-box">
+                    <div class="speaker-meta">
+                        <a href="/speakers/<%= speaker.shortname %>">
+                            <p class="speaker-name"><%= speaker.name %></p>
+                        </a>
+                        <p class="speaker-affiliation"><%= speaker.affiliation %></p>
+                        <p class="speaker-details"><%= speaker.other %></p>
+                    </div>
+                </div>
+                <% } %>
+            </div>
         </div>
         <% }); %>
 
     </div>
+
+    </div>
+    </article>
+</div>
+
+<div class="svg-container footer-svg svg-block">
+  <% include ../template/svgslant.ejs %>
 </div>

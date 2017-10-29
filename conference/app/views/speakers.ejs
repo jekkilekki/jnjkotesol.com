@@ -13,9 +13,15 @@
                 <% include partials/content/speaker-grid.ejs %>
             </section>
 
-            <section class="conference-map">
-                <% include partials/content/map.ejs %>
-            </section>
+            <% if ( pageID == 'speakers' ) { %>
+                <section class="conference-map">
+                    <% include partials/content/map.ejs %>
+                </section>
+            <% } else { %>
+                <section class="bottom-speaker-list">
+                    <% include partials/content/speaker-list.ejs %>
+                </section>
+            <% } %>
         </main>
 
         <% include partials/template/footer.ejs %>

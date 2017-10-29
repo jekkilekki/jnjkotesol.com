@@ -21,18 +21,21 @@ router.get( '/speakers', function( request, response ) {
  **/
 router.get( '/speakers/:speakerid', function( request, response ) {
     var data = request.app.get( 'appData' );
-    var pageSpeakers = [];
+    var pageSpeakers = [], otherSpeakers = [];
 
     data.speakers.forEach( function( item ) {
         if ( item.shortname == request.params.speakerid ) {
             pageSpeakers.push( item );
+        } else {
+            otherSpeakers.push( item );
         }
     });
 
     response.render( 'speakers', {
         pageTitle: 'Speaker Info',
         pageID: 'speaker-single',
-        speakers: pageSpeakers
+        speakers: pageSpeakers,
+        listSpeakers: otherSpeakers
     });
 });
 

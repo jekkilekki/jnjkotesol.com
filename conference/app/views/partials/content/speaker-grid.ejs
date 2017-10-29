@@ -32,10 +32,13 @@
     </div>
 
     <% if ( pageID !== 'home' ) { %>
+        <% if ( pageID !== 'speakers' ) { %>
+            <div class="speaker-info-section">
+        <% } %>
         <div class="speaker-meta">
             <p class="speaker-name"><a href="/speakers/<%= speaker.shortname %>"><%= speaker.name %></a></p>
             <p class="speaker-affiliation"><%= speaker.affiliation %></p>
-            <p class="speaker-session"><strong>Talk / </strong><a href="/talks/<%= speaker.title %>"><%= speaker.title %></a></p>
+            <p class="speaker-session"><strong>Talk / </strong><a href="/talks/<%= speaker.shortname %>"><%= speaker.title %></a></p>
         </div>
 
         <% if ( pageID == 'speakers' ) { %>
@@ -43,7 +46,12 @@
         <% } %>
 
         <% if ( pageID !== 'speakers' ) { %>
-
+            <div class="speaker-info">
+                <p class="speaker-abstract"><%= speaker.abstract %></p>
+                <h2 class="speaker-bio-title">About <%= speaker.nickname %></h2>
+                <p class="speaker-bio"><%= speaker.bio %></p>
+            </div>
+        </div><!-- .speaker-details -->
         <% } %>
     <% } %>
 

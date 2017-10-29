@@ -541,6 +541,11 @@ a.photo img, .photo > a img {
   font-size: 0.8rem;
   margin: auto;
 /*   color: white; */
+    visibility: hidden;
+}
+
+.grid-item:hover .speaker-meta {
+    visibility: visible;
 }
 
 @media screen and (min-width: 46rem) {
@@ -1082,9 +1087,16 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 } */
 
 .screen-reader-text {
-  position: absolute;
+  /*position: absolute;
   top: -9999em;
-  left: -9999em;
+  left: -9999em;*/
+  clip: rect(1px, 1px, 1px, 1px);
+    clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px);
+    position: absolute !important;
+    white-space: nowrap;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
 }
 
 .social-nav ul {
@@ -1292,6 +1304,37 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
     width: 15%;
     padding-bottom: 15%;
     position: absolute;
+    border: 5px solid #a0f;
+    border-image-source: linear-gradient(#a0f, #fff);
+    border-image-slice: 30;
+}
+
+#speakers .speaker-meta {
+    visibility: visible;
+    padding-left: 190px;
+}
+
+#speakers .speaker-meta .speaker-name,
+#speaker-single .speaker-meta .speaker-name {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+#speakers .speaker-meta .speaker-name a,
+#speaker-single .speaker-meta .speaker-name a {
+    color: white;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.36);
+}
+
+#speakers .speaker-meta .speaker-affiliation,
+#speaker-single .speaker-meta .speaker-affiliation {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+#speakers .speaker-meta .speaker-session,
+#speaker-single .speaker-meta .speaker-session {
+    font-weight: 300;
 }
 
 /**
@@ -1299,8 +1342,19 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
  * Speaker SINGLE Page
  * -----------------------------------------------------------------------------
  */
+#speaker-single .speaker-info-section {
+    padding-left: 380px;
+}
+
 #speaker-single .grid-item.photo {
     margin-top: -3rem;
+}
+
+#speaker-single .speaker-meta {
+    visibility: visible;
+    position: relative;
+    top: 3.5rem;
+    max-width: 100%;
 }
 
  #speaker-single .speaker-title {
@@ -1317,4 +1371,28 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
    line-height: 1.4;
    font-size: 1.1rem;
    margin-bottom: 1.6rem;
+   margin-top: 1.6rem;
+ }
+
+ #speaker-single .grid-item.photo {
+     background: #a0f;
+     z-index: 5;
+ }
+
+ #speaker-single .page-section.speakers .grid-item.photo img {
+     opacity: 1;
+ }
+
+ #speaker-single .page-section.speakers .grid-item.photo:hover img {
+     opacity 0.8;
+ }
+
+ #speaker-single .bottom-speaker-list .container article {
+     padding: 4rem auto;
+ }
+
+ #speaker-single .speaker-list .grid-item.photo {
+     width: 15%;
+     padding-bottom: 15%;
+     margin-top: 0;
  }

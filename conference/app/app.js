@@ -1,16 +1,4 @@
-// Node.js Style for Simple Server
-//
-// var http = require( 'http' );
-//
-// var myServer = http.createServer( function( request, response ) {
-//     response.writeHead( 200, { "Content-Type" : "text/html" } );
-//
-//     response.write( '<h1>JNJ KOTESOL Conference</h1>' );
-//     response.end();
-// });
-//
-// myServer.listen(3000);
-// console.log( 'Go to http://localhost:3000 on your browser' );
+
 
 // Using Express.JS
 var express = require( 'express' );
@@ -32,6 +20,8 @@ app.locals.allSpeakers = dataFile.speakers;
 app.use( express.static( 'app/public' ) ); // adds the public folder to routes to use images, files, etc easily
 app.use( require( './routes/index' ) );
 app.use( require( './routes/speakers' ) );
+app.use( require( './routes/schedule' ) );
+app.use( require( './routes/location' ) );
 
 
 var server = app.listen( app.get( 'port' ), function() {

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include partials/template/head.ejs %>
+    </head>
+    <body id="<%= pageID %>">
+        <% include partials/template/header-menu.ejs %>
+
+        <main class="site-content">
+            <% include partials/content/hero.ejs %>
+
+            <section class="page-section schedule">
+                <% include partials/content/schedule.ejs %>
+            </section>
+
+        </main>
+
+        <% include partials/template/footer.ejs %>
+        <% include partials/template/footer-scripts.ejs %>
+    </body>
+</html>
