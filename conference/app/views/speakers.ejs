@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include partials/template/head.ejs %>
+    </head>
+    <body id="<%= pageID %>">
+        <% include partials/template/header-menu.ejs %>
+
+        <main class="site-content">
+            <% include partials/content/hero.ejs %>
+
+            <section class="page-section speakers gradient">
+                <% include partials/content/speaker-grid.ejs %>
+            </section>
+
+            <section class="conference-map">
+                <% include partials/content/map.ejs %>
+            </section>
+        </main>
+
+        <% include partials/template/footer.ejs %>
+        <% include partials/template/footer-scripts.ejs %>
+    </body>
+</html>

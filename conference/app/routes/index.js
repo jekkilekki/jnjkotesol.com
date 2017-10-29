@@ -4,12 +4,16 @@ var router = express.Router();
 
 /**
  * Homepage Route ================================
- **/
+ */
 router.get( '/', function( request, response ) {
-    response.send(`
-        <h1>JNJ KOTESOL 2017 Regional Conference</h1>
-        <p>Hello World</p>
-    `);
+    var data = request.app.get( 'appData' );
+    var pageSpeakers = data.speakers;
+
+    response.render( 'index', {
+        pageTitle: 'Home',
+        pageID: 'home',
+        speakers: pageSpeakers
+    }); // views/index.ejs
 });
 
 module.exports = router;

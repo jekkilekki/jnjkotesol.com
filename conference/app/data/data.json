@@ -2,65 +2,93 @@
     "speakers": [{
         "title": "Using Realia in Learning and Practicing English",
         "name": "Christensen Low",
-        "shortname": "Christensen",
+        "nickname": "Christensen",
+        "shortname": "Christensen_Low",
+        "affiliation": "Sunkyunkwan University",
+        "other": "",
         "time": "1:45",
         "room": "Room 1",
         "abstract": "<p>We have all heard the canned replies of students: “Hello.  How are you?  I’m fine.  Thank you, and you?”  These are often necessary stepping stones to students learning the diversity of responses possible in a language, but our students need ways to propel them to fluency.  In my ELT and EAP classes, I try to include as much realia as possible (video clips, cartoons, Dear Abby, songs and so forth).  Using realia in my classes, hopefully, also shows students how they too can engage more and more in using English in their daily lives.  One struggle in using realia is making sure they are not too overwhelming to students (Kraschen’s i +1).  So, I try to give them tools, such as using context clues, to help them figure out what is being communicated.  Another concern is making sure that we are not breaking any copyright laws by using realia in the classroom.  I use snippets of videos freely available on youtube and other means to overcome this.  In this workshop, we will discuss how to use realia in a way that will excite students into seeing how English is used naturally.</p><ul><li>short introduction of what is realia and common ways I use them in my classes [10 minutes]</li><li>group discussions on how attendees use realia in their classes or how they might be able to use them (along with potential problems) [20 minutes]</li><li>going over what was discussed in the groups [20 minutes]</li></ul>",
         "bio": "<p>I have been teaching ELT and EAP for the past 16 years.  My teaching career started in Seoul while I was finishing my MA, but I have also taught in Chicago and other South Korean cities.  Mostly, I have taught at universities in both countries including Yonsei, DePaul, Yeungnam and, my current place of employment, Sungkyunkwan University.  Though, I have taught all ages and in many different learning programs.  Most students enjoy using technology to further their studies, so I have tried to see how I can incorporate new technologies into my teaching arsenal.</p>",
-        "pics": ["", ""]
+        "img": "Christensen_Low_tie.jpg",
+        "media": ["", ""]
     }, {
         "title": "11 Things you didn't know Google could do for your Classroom",
         "name": "Aaron Snowberger",
-        "shortname": "Aaron",
+        "nickname": "Aaron",
+        "shortname": "Aaron_Snowberger",
+        "affiliation": "Jeonju University",
+        "other": "Google Certified Educator &amp; Trainer",
         "time": "1:45",
         "room": "Room 2",
         "abstract": "<p>Lots of people use Google on a daily basis. But are you using Google as effectively as you could be? In this presentation, come learn at least 11 tips and tricks for various Google services that you probably didn't know before. We'll go over Google Search tricks, Gmail, Google Drive, Calendar, and other Google services you may find useful in your classes. This presentation will be focused primarily on making you a more effective teacher by utilizing the many tools (and tricks) that Google has created.</p>",
         "bio": "<p>Aaron Snowberger is a Google Certified Trainer, Educator, and G Suite Administrator. He's the Technology instructor at Global Prodigy Academy international high school in Jeonju where he's been instructing students and staff in G Suite since 2013. He holds a bachelor's degree in Computer Science and a master's degree in Graphic/Media Design. Aaron has lived in Jeonju since 2006, and has also taught English at Jeonju University since 2010.</p>",
-        "pics": ["", ""]
+        "img": "Aaron_Snowberger.png",
+        "media": ["", ""]
     }, {
         "title": "Intonation Matters",
         "name": "C. Aaron Pyle",
-        "shortname": "Aaron",
+        "nickname": "Aaron",
+        "shortname": "Aaron_Pyle",
+        "affiliation": "",
+        "other": "",
         "time": "2:45",
         "room": "Room 1",
         "abstract": "The topic of this lecture will explore the importance of intonation in the English language and how to teach such a lesson.  It is a subject that is often overlooked in ESL, but there has been a great deal of research committed to it.<h3>Goals</h3><ul><li>Inform ESL students on the importance of intonation in the English language in order to convey proper context.</li><li>Teaching students how to express themselves tonally while speaking in English, even if they say very little.</li><li>Tips on how to present the lesson in a fun and informative manner to students, whether they are elementary students or adults.</li></ul><h3>Outline</h3><ol><li>Introduction</li><li>Main Points<ol><li>Intonation can convey a wide variety of meanings even if the speaker says very little.</li><li>Intonation can build confidence in the speaker and create great rapport within the conversation.</li><li>Intonation lessons can be taught to students of most age groups and levels.</li></ol></li><li>Workshop<ul><li>Audience members are asked to participate in a series of intonation exercises.</li></ul></li><li>Closing</li></ol>",
         "bio": "C. Aaron Pyle is an ESL teacher at Hwayoung Elementary School as well as Kwangjang Elementary School.  He is TESL certified and has ten years of experience teaching in South Korea and has taught both elementary and middle school.  He has also taken part in programs designed for high school, university, and adult ESL students.",
-        "pics": ["", ""]
+        "img": "Aaron_Pyle.jpg",
+        "media": ["", ""]
     }, {
         "title": "How to Encourage EFL Students to Speak English Freely in a Conversation Class",
         "name": "Hyukbin Kwon",
-        "shortname": "Binny",
+        "nickname": "Binny",
+        "shortname": "Hyukbin_Kwon",
+        "affiliation": "Wonkwang University",
+        "other": "",
         "time": "2:45",
         "room": "Room 2",
         "abstract": "The biggest challenge to teach conversational English for beginners would be to have students speak. That is because students often do not feel safe to speak. Safe environment is one of the most crucial factors in making students speak freely. I will introduce some useful activities to make students feel safe and okay to make mistakes, and enjoy speaking English.",
         "bio": "English Conversation Teacher at Wonkwang Health Science University",
-        "pics": ["", ""]
+        "img": "Hyukbin_Kwon.jpg",
+        "media": ["", ""]
     }, {
         "title": "Integrating Cultural Lessons within the EFL Classroom",
         "name": "Alicia Aukema",
-        "shortname": "Alicia",
+        "nickname": "Alicia",
+        "shortname": "Alicia_Aukema",
+        "affiliation": "",
+        "other": "",
         "time": "3:45",
         "room": "Room 1",
         "abstract": "<p>Teaching English as a foreign language is so much more than just grammar, vocabulary, pronunciation and the like—it contains more subtle culture components than teachers or students realize. Teachers, without knowing it, are giving cultural lessons by how they teach the language and run their classes. Evidently, awareness of this comes up when a new teacher enters a classroom setting where the former teacher was from a different culture. It causes unnecessary misunderstandings and misinterpretations that would be remedied through cultural awareness. There are many simple ways to help students become more culturally aware of the diverse ways English is used worldwide.</p><p>The attachment between culture and language is something that is rarely integrated into lessons and so this presentation will demonstrate varies ways to appropriately insert cultural lessons effectively. Many students are curious about the world of English and are only exposed to stereotypes oppose to real life cultural awareness. Words and intonation are different in many English-speaking countries and knowing their significance will benefit students as they are likely to meet English speakers who do not talk like their textbook recordings. The benefits of cultural awareness will also be explored to show how easy and fun it can be.</p><h3>Goals</h3><ol><li>Increase cultural awareness and show how it can be used to benefit the students.</li><li>To give practical tips in including cultural lessons within the EFL classroom.</li></ol>",
         "bio": "F. Alicia Aukema is an ESL professor at Chongshin University and is working on a Master’s degree in intercultural studies. She has been teaching English for nine years in Korea, Canada, and the United States. Her experiences come from teaching many levels including elementary school, high school, and University. Although most of her students have been Korean, she has taught students from other cultures as well. Her studies have led her to do extensive research on the significance of cultural lenses within the classroom and seek to implement more cultural awareness for students as well as teachers.",
-        "pics": ["", ""]
+        "img": "Alicia_Aukema.jpg",
+        "media": ["", ""]
     }, {
         "title": "Small Talk = Big Smiles",
         "name": "Lisa Kim",
-        "shortname": "Lisa",
+        "nickname": "Lisa",
+        "shortname": "Lisa_Kim",
+        "affiliation": "Jeonju University",
+        "other": "",
         "time": "4:00",
         "room": "Room 1",
         "abstract": "Are you looking for an activity that can liven up students of all ages?  Would you like to provide an educational and practical speaking activity with less time to prepare on your part?  Whether your purpose is to warm up your class, introduce new expressions or simply review previous lessons, this activity can encourage students to start up a small talk / practice speaking, and require them to connect with the person they are talking to.  This activity actually originated from a game that I picked up from a children’s party. I realized it was fun and can be interactive, so I tailor-made it for the classroom setting and began using it as either an ice breaker or for speaking practice.",
         "bio": "Lisa Kim has been on the road of helping students learn how to properly communicate in English for 12 years.  Her teaching specialty lies in English conversation.  She is a strong believer that every student can master English (or any language) if learned properly.  For the purpose of encouragement, she constantly reminds her students to imagine learning English as if you were learning how to ride a bicycle – with every fall, you get up, try again and you get better with continuous practice and determination, until you actually learn it and enjoy the benefits of this skill.  Her style of teaching is usually interactive and communicative rather than being faithfully stuck to every page of a given textbook.  Lisa has been living in Korea for nine years. At present, she teaches at Jeonju University and sometimes writes for the school newspaper.",
-        "pics": ["", ""]
+        "img": "Lisa_Kim.png",
+        "media": ["", ""]
     }, {
         "title": "Bringing Augmented Reality into the EFL Classroom",
         "name": "Susan Webster",
-        "shortname": "Susan",
+        "nickname": "Susan",
+        "shortname": "Susan_Webster",
+        "affiliation": "Jeonju University",
+        "other": "",
         "time": "4:15",
         "room": "Room 1",
         "abstract": "<p>Augmented reality in the education sector is growing, and as it does, it is important to look at how the potential of AR can be harnessed in the classroom. While it may be the new “it” technology, educators need to understand how they can incorporate AR into their classrooms and use it to its fullest potential.</p><p>If augmented reality it to be effectively incorporated into education, it needs to push students to explore, and in that exploration; learn. By bringing education to life, both students and teachers can engage with subject content in a new and fun way.</p><p>In this short 10-minute demonstration I will introduce an AR app that is easy to setup and use. An app that, with a little creative thinking, has potential liven up your course content, students’ homework and most importantly motivate your students to engage with learning.</p>",
         "bio": "<p>Susan Webster holds an MSc TESOL from Edinburgh University and a B/Des Hons from Duncan of Jordanstone, Dundee University. She is currently employed at Jeonju University, South Korea, where she teaches English conversation classes. Her career as an EFL instructor has included delivering storytelling workshops to new JLP programme teachers, S.Korea, conducting methodology workshops for Korean elementary teachers, teaching English in, elementary and secondary schools and universities in South Korea, Japan and her native Scotland.</p><p>Susan is passionate about all aspects of language-teaching methodology and strives to produce meaningful, engaging and creative lessons for her learners. She is particularly interested in issues relating to e-learning and teaching and published research exploring language use in the virtual world of Second Life.</p><p>When Susan is not teaching or writing for her blog, you’ll either find her doing yoga, bouldering, running or cycling around Korea. s.webster.jju@gmail.com / www.eltsparks.wordpress.com</p>",
-        "pics": ["", ""]
+        "img": "Susan_Webster.jpg",
+        "media": ["", ""]
     }]
 }

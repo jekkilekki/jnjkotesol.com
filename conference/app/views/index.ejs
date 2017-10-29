@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include partials/template/head.ejs %>
+    </head>
+    <body id="<% pageID %>">
+        <!-- Conference page for Jeonju-North Jeolla KOTESOL -->
+        <!-- Inspiration sites:
+            Anything by Wes Bos
+            https://experiencecode.com
+            https://2017.seattle.wordcamp.org/
+            http://daremightythings.co/
+            https://2017.riga.wordcamp.org/
+            http://preview.themeforest.net/item/event-time-conference-event-html-template/full_screen_preview/12858234?ref=blueberry1&clickthrough_id=1110131187&redirect_back=true
+            http://demo.ventcampwp.com/?changeset_uuid=6abd48a2-7616-4cda-92cd-06aee541cd23
+            http://demo.themeum.com/?theme=eventum
+            https://cloudnext.withgoogle.com/
+        -->
+
+        <% include partials/template/header-menu.ejs %>
+
+        <main class="site-content">
+            <% include partials/content/hero.ejs %>
+
+            <section class="page-section speakers gradient">
+                <% include partials/content/speaker-grid.ejs %>
+            </section>
+
+            <section class="page-section schedule">
+                <% include partials/content/schedule.ejs %>
+            </section>
+
+            <section class="page-section buzz gradient">
+                <% include partials/content/buzz.ejs %>
+            </section>
+
+            <section class="page-section gallery">
+                <% include partials/content/gallery.ejs %>
+            </section>
+
+            <section class="page-section sponsors gradient">
+                <% include partials/content/sponsors.ejs %>
+            </section>
+
+            <section class="conference-map">
+                <% include partials/content/map.ejs %>
+            </section>
+        </main>
+
+        <% include partials/template/footer.ejs %>
+        <% include partials/template/footer-scripts.ejs %>
+    </body>
+</html>

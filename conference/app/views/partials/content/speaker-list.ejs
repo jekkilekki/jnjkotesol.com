@@ -1,0 +1,18 @@
+<div class="container">
+    <h2 class="section-title">Speakers</h2>
+
+    <div class="speaker-list">
+
+        <% speakers.forEach( function( speaker ) { %>
+        <div class="speaker">
+            <figure class="speaker-img">
+                <div style="background-image: url(https://media.licdn.com/media/AAEAAQAAAAAAAATqAAAAJDMwYTllZTg4LTZhY2EtNGUyYS05NTZlLTdlOGNmMmUxZDhiNg.jpg)"></div>
+            </figure>
+            <p class="speaker-name"><a href="/speakers/<%= speaker.shortname %>"><%= speaker.name %></a></p>
+            <p class="speaker-affiliation"><%= speaker.affiliation %></p>
+            <p class="speaker-session"><strong>Talk / </strong><a href="/talks/<%= speaker.title %>"><%= speaker.title %></a></p>
+        </div>
+        <% }); %>
+
+    </div>
+</div>
