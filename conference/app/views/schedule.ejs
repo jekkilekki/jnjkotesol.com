@@ -9,8 +9,16 @@
         <main class="site-content">
             <% include partials/content/hero.ejs %>
 
-            <section class="page-section schedule">
+            <% if ( pageID == 'home' ) { %>
+                <section class="page-section schedule">
+            <% } else { %>
+                <section class="page-section gradient">
+            <% } %>
                 <% include partials/content/schedule.ejs %>
+            </section>
+
+            <section class="bottom-speaker-list">
+                <% include partials/content/speaker-list.ejs %>
             </section>
 
         </main>

@@ -47,9 +47,9 @@
 
         <% if ( pageID !== 'speakers' ) { %>
             <div class="speaker-info">
-                <p class="speaker-abstract"><%= speaker.abstract %></p>
+                <p class="speaker-abstract"><%- speaker.abstract %></p>
                 <h2 class="speaker-bio-title">About <%= speaker.nickname %></h2>
-                <p class="speaker-bio"><%= speaker.bio %></p>
+                <p class="speaker-bio"><%- speaker.bio %></p>
             </div>
         </div><!-- .speaker-details -->
         <% } %>

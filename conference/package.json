@@ -4,15 +4,16 @@
   "description": "Jeonju-North Jeolla KOTESOL Regional Conference website",
   "main": "app/app.js",
   "scripts": {
-    "start": "nodemon -e css,ejs,js,json --watch app"
+    "start": "nodemon -e css,ejs,js,json --watch app --ignore feedback.json"
   },
   "author": "Aaron Snowberger",
   "license": "MIT",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/jekkilekki/jnjkotesol.com"
+    "type": "git",
+    "url": "https://github.com/jekkilekki/jnjkotesol.com"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "reload": "^2.2.2"
