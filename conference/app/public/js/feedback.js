@@ -3,10 +3,18 @@ $( function() {
 
     $( '.feedback-form' ).submit( function(e) {
         e.preventDefault();
+
+        if ( e.target.id == 'negative-feedback' ) {
+          rating = 'negative';
+        } else {
+          rating = 'positive';
+        }
+
         $.post( 'api', {
             name: $( '#feedback-form-name' ).val(),
             title: $( '#feedback-form-title' ).val(),
-            message: $( '#feedback-form-message' ).val()
+            message: $( '#feedback-form-message' ).val(),
+            feedbackType: rating
         }, updateFeedback );
     });
 
@@ -24,10 +32,17 @@ $( function() {
         var output = '';
         $.each( data, function( key, item ) {
 
-        output += '    <div class="feedback-item item-list media-list">';
+        output += '    <li class="feedback-item item-list media-list">';
         output += '        <div class="feedback-item media">';
 
-        output += '         <div class="media-left"><button class="feedback-delete btn btn-xs btn-danger"><span id="' + key + '" class="fa fa-times"></span></button></div>';
+        // Positive OR Negative button
+        if ( item.feedbackType == 'negative' ) {
+          output += '         <button class="button button-small button-inverse negative-feedback"><i class="fa fa-thumbs-down"></i></button>';
+        } else {
+          output += '         <button class="button button-small negative-feedback"><i class="fa fa-thumbs-up"></i></button>';
+        }
+
+        output += '         <button class="feedback-delete button button-small button-inverse"><span id="' + key + '" class="fa fa-times"></span></button>';
 
         output += '            <div class="feedback-info media-body">';
         output += '                <div class="feedback-head">';
@@ -36,7 +51,7 @@ $( function() {
         output += '                <div class="feedback-message">' + item.message + '</div>';
         output += '            </div>';
         output += '        </div>';
-        output += '    </div>';
+        output += '    </li>';
 
         });
 

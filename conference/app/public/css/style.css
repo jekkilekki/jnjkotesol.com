@@ -1441,3 +1441,225 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
      padding-bottom: 15%;
      margin-top: 0;
  }
+
+
+ /**
+  * -----------------------------------------------------------------------------
+  * Feedback & Chat
+  * -----------------------------------------------------------------------------
+  */
+  .feedback .container,
+  .chat-window {
+    display: flex;
+    flex-flow: row-reverse;
+  }
+
+  .feedback .feedback-form,
+  .chat .chat-form {
+    flex: 1 1 30%;
+    margin-left: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  .feedback .maincontent,
+  .chat .chat-panel {
+    flex: 1 1 60%;
+  }
+
+  .form-group label {
+    margin-bottom: 0.25rem;
+    margin-top: 0.75rem;
+    display: block;
+    font-weight: 400;
+  }
+
+  .form-control {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+    margin-right: 1rem;
+    width: 100%;
+    min-width: 200px;
+    border-radius: 3px;
+    border: 1px solid #aaa;
+    font-weight: 300;
+  /*   max-width: 300px; */
+  }
+
+  .form-control.disabled {
+    background: #eee;
+    opacity: 0.5;
+  }
+
+  .form-submit {
+    font-family: "Fira Sans Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    outline: none;
+    border: none;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 400!important;
+  }
+
+  .feedback .form-submit {
+    margin-left: 1rem;
+  }
+
+  .button {
+    color: white;
+    font-weight: bold;
+    line-height: 1rem;
+    text-align: center;
+    background: #a0f;
+    padding: 10px 20px;
+    border-radius: 3px;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.36);
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+  }
+
+  .button-inverse {
+    background: white;
+    color: #a0f;
+  }
+
+  .button:hover {
+    border: none;
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.36);
+    background: white;
+    color: #a0f;
+  }
+
+  .button-inverse:hover {
+    background: #a0f;
+    color: white;
+  }
+
+  .button-small {
+    padding: 0rem 0.25rem;
+    font-size: 0.5rem;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.36);
+  }
+
+  .button-small:hover {
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.36);
+  }
+
+  ul.feedback-messages {
+    list-style: none;
+    padding: 1.5rem 0;
+  }
+
+  li.feedback-item {
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .feedback-messages .button {
+    float: left;
+    margin-right: 0.5rem;
+    margin-top: 2px;
+  }
+
+  .feedback-delete {
+    position: absolute;
+    right: 0;
+  }
+
+  .feedback-title {
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .feedback-name {
+    background: #879CA8;
+    color: white;
+    padding: 0.125rem 0.25rem;
+    border-radius: 3px;
+    margin-left: 0.5rem;
+    font-weight: 300;
+    font-size: 0.8rem;
+    margin-top: -1rem;
+  }
+
+  .feedback-message {
+    line-height: 1.4;
+  }
+
+  .chat {
+    padding: 2rem 0;
+  }
+
+  .chat-panel {
+    margin-top: -18px;
+  }
+
+  .chat-display {
+    background: #BBDEFB;
+    padding: 1rem 1rem 1rem;
+    margin-top: -10px;
+    border: 1px solid #aaa;
+    margin-bottom: 6rem;
+    height: 400px;
+    overflow-y: scroll;
+  }
+
+  .chat-username {
+    margin-bottom: 0;
+    font-size: 0.8rem;
+  }
+
+  .chat-timestamp {
+    font-size: 0.7rem;
+    position: absolute;
+    text-transform: uppercase;
+    opacity: 0.7;
+    bottom: 0;
+    right: -40px;
+  }
+
+  .chat-message-text {
+    width: auto;
+    background: white;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.16);
+    padding: 0.35rem 0.75rem;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+
+  .chat-message-text:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: -8px;
+    border-top: 8px solid white;
+    border-left: 8px solid transparent;
+    width: 0;
+    height: 0;
+  }
+
+  .user-text {
+    margin-left: 0;
+    text-align: right;
+  }
+
+  .user-text .chat-message-text {
+    background: #FFEB3B;
+  }
+
+  .user-text .chat-message-text:before {
+    right: -8px;
+    left: auto;
+    border-left: none;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #FFEB3B;
+  }
+
+  .user-text .chat-timestamp {
+    right: auto;
+    left: -40px;
+  }

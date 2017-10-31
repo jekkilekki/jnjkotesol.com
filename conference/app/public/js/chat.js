@@ -3,6 +3,17 @@ var socket = io();
 var chatUsername = document.querySelector( '#chat-username' );
 var chatMessage = document.querySelector( '#chat-message' );
 
+chatUsername.onchange = function() {
+  chatUsername.setAttribute( "disabled", true );
+  chatUsername.className = 'form-control disabled';
+
+  // Possibly allow users to change their Username in chat later
+  // var changeButton = document.createElement( 'span' );
+  // changeButton.className = 'change-username';
+  // changeButton.innerHTML = '<a href="#">Change</a>';
+  // chatUsername.appendChild( changeButton );
+}
+
 socket.on( 'connect', function() {
     var chatForm = document.forms.chatForm;
 
@@ -27,14 +38,36 @@ socket.on( 'connect', function() {
 
 function showMessage( data ) {
     var chatDisplay = document.querySelector( '.chat-display' );
-    var newMessage = document.createElement( 'p' );
+    var newMessageBox = document.createElement( 'div' );
+    var now = new Date();
+    var time = formatTime( now );
 
     if ( chatUsername.value == data.username ) {
-        newMessage.className = 'bg-success chat-text';
+        newMessageBox.className = 'chat-text user-text';
+        newMessageBox.innerHTML = '<p class="chat-message-text">' + data.message + '<span class="chat-timestamp">' + time + '</span></p>';
     } else {
-        newMessage.className = 'bg-info text-warning chat-text';
+        newMessageBox.className = 'chat-text';
+        newMessageBox.innerHTML = '<p class="chat-username">' + data.username + '</p><p class="chat-message-text">' + data.message + '<span class="chat-timestamp">' + time + '</span></p>';
     }
 
-    newMessage.innerHTML = '<strong>' + data.username + '</strong>: ' + data.message;
-    chatDisplay.insertBefore( newMessage, chatDisplay.firstChild );
+    chatDisplay.insertBefore( newMessageBox, chatDisplay.firstChild );
+}
+
+function formatTime( time ) {
+  // formats a javascript Date object into a 12h AM/PM time string
+  var hour = time.getHours();
+  var minute = time.getMinutes();
+  var amPM = ( hour > 11 ) ? "pm" : "am";
+
+  if ( hour > 12 ) {
+    hour -= 12;
+  } else if ( hour == 0 ) {
+    hour = "12";
+  }
+
+  if ( minute < 10 ) {
+    minute = "0" + minute;
+  }
+
+  return hour + ":" + minute + ' ' + amPM;
 }

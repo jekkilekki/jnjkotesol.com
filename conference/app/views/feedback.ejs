@@ -4,18 +4,6 @@
         <% include partials/template/head.ejs %>
     </head>
     <body id="<% pageID %>">
-        <!-- Conference page for Jeonju-North Jeolla KOTESOL -->
-        <!-- Inspiration sites:
-            Anything by Wes Bos
-            https://experiencecode.com
-            https://2017.seattle.wordcamp.org/
-            http://daremightythings.co/
-            https://2017.riga.wordcamp.org/
-            http://preview.themeforest.net/item/event-time-conference-event-html-template/full_screen_preview/12858234?ref=blueberry1&clickthrough_id=1110131187&redirect_back=true
-            http://demo.ventcampwp.com/?changeset_uuid=6abd48a2-7616-4cda-92cd-06aee541cd23
-            http://demo.themeum.com/?theme=eventum
-            https://cloudnext.withgoogle.com/
-        -->
 
         <% include partials/template/header-menu.ejs %>
 
@@ -24,34 +12,59 @@
 
             <section class="page-section feedback gradient">
                 <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <h1 class="feedback-form-title">Send us feedback</h1>
-          <form class="feedback-form">
-            <div class="form-group">
-              <label for="feedback-form-name">Name</label>
-              <input type="text" class="form-control" id="feedback-form-name" placeholder="Enter your name">
-            </div>
+                  <form class="feedback-form">
+                    <h4 class="feedback-form-title">Leave your feedback</h4>
+                    <div class="form-group">
+                      <label for="feedback-form-name">Name</label>
+                      <input type="text" class="form-control" id="feedback-form-name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                      <label for="feedback-form-title">Title</label>
+                      <input type="text" class="form-control" id="feedback-form-title" placeholder="Title of your feedback">
+                    </div>
+                    <div class="form-group">
+                      <label for="feedback-form-message">Message</label>
+                      <textarea type="text" placeholder="Enter your message" class="form-control" id="feedback-form-message" rows="6"></textarea>
+                    </div>
+                    <input type="hidden" id="feedback-form-type">
+                    <button type="submit" id="positive-feedback" class="button btn-default positive-feedback pull-right form-submit">
+                      <i class="fa fa-thumbs-up"></i><span class="screen-reader-text">Positive Feedback</span>
+                    </button>
+                    <button type="submit" id="negative-feedback" class="button negative-feedback button-inverse pull-right form-submit">
+                      <i class="fa fa-thumbs-down"></i><span class="screen-reader-text">Negative Feedback</span>
+                    </button>
+                  </form>
 
-            <div class="form-group">
-              <label for="feedback-form-title">Title</label>
-              <input type="text" class="form-control" id="feedback-form-title" placeholder="Title of your feedback">
-            </div>
+                  <aside class="recent-feedback">
+                      <h4 class="article-title">Recent Feedback</h4>
 
-            <div class="form-group">
-                <label for="feedback-form-message">Message</label>
-                <textarea type="text" placeholder="Enter your message, then hit the submit"  class="form-control" id="feedback-form-message" rows="6"></textarea>
-            </div>
-            <button type="submit" class="btn btn-default pull-right">Submit</button>
-          </form>
-        </div><!-- primary -->
-        <aside class="col-sm-8">
-          <div class="maincontent feedback">
-              <h2 class="article-title">Recent Feedback</h2>
-              <div class="feedback-messages"></div>
-          </div>
-        </aside><!-- secondary -->
-      </div>
+                      <ul class="feedback-messages">
+                        <!-- <li class="feedback-item item-list media-list">
+                          <div class="feedback-item media">
+                            <div class="button button-small button-inverse negative-feedback"><i class="fa fa-thumbs-down"></i></div>
+                            <button class="feedback-delete button button-small button-inverse"><span id="0" class="fa fa-times"></span></button>
+                            <div class="feedback-info media-body">
+                              <div class="feedback-head">
+                                <div class="feedback-title">Meeting Time<small class="feedback-name label label-info">Jane</small></div>
+                              </div>
+                              <div class="feedback-message">Would you consider moving the meeting time 30 minutes to about 6pm? It's tough to make it to the meetings on time right after work.</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="feedback-item item-list media-list">
+                          <div class="feedback-item media">
+                            <div class="button button-small negative-feedback"><i class="fa fa-thumbs-up"></i></div>
+                            <button class="feedback-delete feedback-delete button button-small button-inverse"><span id="1" class="fa fa-times"></span></button>
+                            <div class="feedback-info media-body">
+                              <div class="feedback-head">
+                                <div class="feedback-title">Great Speaker<small class="feedback-name label label-info">Roy</small></div>
+                              </div>
+                              <div class="feedback-message">I really enjoyed the speaker this month. Would love to hear another presentation.</div>
+                            </div>
+                          </div>
+                        </li> -->
+                      </ul>
+                  </aside>
     </div><!-- container -->
             </section>
         </main>
