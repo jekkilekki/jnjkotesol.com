@@ -14,7 +14,7 @@
     <div class="grid-item photo">
         <div class="grid-inner">
             <figure  class="diamonds-item photo rhombus bg-primary">
-                <img class="speaker-img" src="/img/speakers/<%= speaker.img %>">
+                <img class="speaker-img" src="/img/people/<%= speaker.img %>">
             </figure>
 
             <% if ( pageID == 'home' ) { %>
@@ -38,7 +38,7 @@
         <div class="speaker-meta">
             <p class="speaker-name"><a href="/speakers/<%= speaker.shortname %>"><%= speaker.name %></a></p>
             <p class="speaker-affiliation"><%= speaker.affiliation %></p>
-            <p class="speaker-session"><strong>Talk / </strong><a href="/talks/<%= speaker.shortname %>"><%= speaker.title %></a></p>
+            <p class="speaker-session"><strong>Talk / </strong><a href="/speakers/<%= speaker.shortname %>"><%= speaker.title %></a></p>
         </div>
 
         <% if ( pageID == 'speakers' ) { %>

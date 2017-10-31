@@ -1,0 +1,52 @@
+{
+  "team": [
+    {
+      "name": "Ingrid Zwaal",
+      "title": "President",
+      "email": "",
+      "site": "",
+      "bio": "<p>Ingrid Zwaal is currently the foreign teacher who has been in Jeonju the longest at 23 years. She works at Jeonju University when not playing volleyball or with her three badly behaving dogs. She writes a weekly news column in a local paper about herself and her adventures.</p>",
+      "img": "Ingrid_Zwaal.png"
+    },
+    {
+      "name": "Suhhee Kang",
+      "title": "Vice President",
+      "email": "",
+      "site": "",
+      "bio": "<p>Suhhee Kang has taught English since 1998. She has taught in several Hagwons including Min Byung Chul, Jung Cheol, Jongno and E.Bo Young's talking club in Seoul and Bundang before moving to Jeonju.</p><p>Suhhee is currently a self employed tutor and enjoys teaching. She is especially happy to see her students improving their language skills. Autonomy is important her classroom, and her expectations are that the students take control of their learning process. She also does her best to promote a comfortable learning environment where her students don't feel afraid of making mistakes.</p>",
+      "img": "Suhhee_Kang.png"
+    },
+    {
+      "name": "Susan Webster",
+      "title": "Workshop Coordinator",
+      "email": "s.webster.jju@gmail.com",
+      "site": "http://eltsparks.wordpress.com",
+      "bio": "<p>Susan Webster holds an MSc TESOL from Edinburgh University and a B/Des Hons from Duncan of Jordanstone, Dundee University. She is currently employed at Jeonju University, South Korea, where she teaches English conversation classes. Her career as an EFL instructor has included delivering storytelling workshops to new JLP programme teachers, S.Korea, conducting methodology workshops for Korean elementary teachers, teaching English in, elementary and secondary schools and universities in South Korea, Japan and her native Scotland.</p><p>Susan is passionate about all aspects of language-teaching methodology and strives to produce meaningful, engaging and creative lessons for her learners. She is particularly interested in issues relating to e-learning and teaching and published research exploring language use in the virtual world of Second Life.</p><p>When Susan is not teaching or writing for her blog, you’ll either find her doing yoga, bouldering, running or cycling around Korea. s.webster.jju@gmail.com / www.eltsparks.wordpress.com</p>",
+      "img": "Susan_Webster.jpg"
+    },
+    {
+      "name": "Andy Webster",
+      "title": "Workshop Coordinator",
+      "email": "prof.a.webster@gmail.com",
+      "site": "http://eltsparks.wordpress.com",
+      "bio": "<p>Andy Webster holds a degree in Psychology and Philosophy from the University of Dundee and an MSc in TESOL from Edinburgh University. He completed his CELTA in 2013 and has published research exploring the pedagogical potential of virtual worlds and Web 2.0 tools. He has taught a variety of different learners in Japan and South Korea. This experience has provided him with a wonderful opportunity to develop the skills and knowledge required to teach different levels of English to those with varying learning abilities. He is especially keen to investigate new teaching methods and enjoys the continuing challenges associated with English language teaching. He currently enjoys teaching at Jeonju University where he continually seeks to provide an engaging, nurturing and creative learning environment for all students.</p>",
+      "img": "Andy_Webster.jpg"
+    },
+    {
+      "name": "Aaron Snowberger",
+      "title": "Web Editor",
+      "email": "aaron.jju@gmail.com",
+      "site": "https://aaron.kr",
+      "bio": "<p>Aaron Snowberger is a Google Certified Trainer, Educator, and G Suite Administrator. He's the Technology instructor at Global Prodigy Academy international high school in Jeonju where he's been instructing students and staff in G Suite since 2013. He holds a bachelor's degree in Computer Science and a master's degree in Graphic/Media Design. Aaron has lived in Jeonju since 2006, and has also taught English at Jeonju University since 2010.</p>",
+      "img": "Aaron_Snowberger.png"
+    },
+    {
+      "name": "Miriam Lee",
+      "title": "Membership Coordinator",
+      "email": "",
+      "site": "",
+      "bio": "<p>Miriam Lee, while not defending her Noraebang title or re-organizing her NPR mug collection, is most likely singing in the hallway at the Jeonju English Center, where she teaches all the fifth graders of Jeonju to sing the Do Re Mi song. She received her Bachelor of Arts degree from the University of Connecticut (in the United States) in 2003 in Art History and Anthropology, and received third place in a Care Bears coloring contest in Jersey City in 1986.</p>",
+      "img": "Miriam_Lee.png"
+    }
+  ]
+}

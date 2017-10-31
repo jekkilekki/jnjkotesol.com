@@ -1,0 +1,34 @@
+<div class="container">
+    <!-- http://davist11.github.io/css-diamond-grid/# -->
+  <div class="grid">
+
+    <% team.forEach( function( member ) { %>
+            <article class="speaker team-member">
+    <div class="grid-item photo">
+        <div class="grid-inner">
+            <figure  class="diamonds-item photo rhombus bg-primary">
+                <img class="speaker-img" src="/img/people/<%= member.img %>">
+            </figure>
+        </div>
+    </div>
+
+            <div class="speaker-info-section">
+
+        <div class="speaker-meta">
+            <p class="speaker-name"><%= member.name %></p>
+            <p class="speaker-affiliation"><%= member.title %></p>
+        </div>
+
+
+
+
+            <div class="speaker-info">
+                <h2 class="speaker-bio-title">About <%= member.nickname %></h2>
+                <p class="speaker-bio"><%- member.bio %></p>
+            </div>
+        </div><!-- .speaker-info-section -->
+</article><!-- .team-member -->
+    <% }); %>
+
+  <!--     <a class="page-button button">Register today!</a> -->
+</div>

@@ -1,5 +1,6 @@
 {
-    "speakers": [{
+    "speakers": [
+      {
         "title": "Using Realia in Learning and Practicing English",
         "name": "Christensen Low",
         "nickname": "Christensen",
@@ -12,7 +13,8 @@
         "bio": "<p>I have been teaching ELT and EAP for the past 16 years.  My teaching career started in Seoul while I was finishing my MA, but I have also taught in Chicago and other South Korean cities.  Mostly, I have taught at universities in both countries including Yonsei, DePaul, Yeungnam and, my current place of employment, Sungkyunkwan University.  Though, I have taught all ages and in many different learning programs.  Most students enjoy using technology to further their studies, so I have tried to see how I can incorporate new technologies into my teaching arsenal.</p>",
         "img": "Christensen_Low_tie.jpg",
         "media": ["", ""]
-    }, {
+      },
+      {
         "title": "11 Things you didn't know Google could do for your Classroom",
         "name": "Aaron Snowberger",
         "nickname": "Aaron",
@@ -25,7 +27,8 @@
         "bio": "<p>Aaron Snowberger is a Google Certified Trainer, Educator, and G Suite Administrator. He's the Technology instructor at Global Prodigy Academy international high school in Jeonju where he's been instructing students and staff in G Suite since 2013. He holds a bachelor's degree in Computer Science and a master's degree in Graphic/Media Design. Aaron has lived in Jeonju since 2006, and has also taught English at Jeonju University since 2010.</p>",
         "img": "Aaron_Snowberger.png",
         "media": ["", ""]
-    }, {
+      },
+      {
         "title": "Intonation Matters",
         "name": "C. Aaron Pyle",
         "nickname": "Aaron",
@@ -38,7 +41,8 @@
         "bio": "C. Aaron Pyle is an ESL teacher at Hwayoung Elementary School as well as Kwangjang Elementary School.  He is TESL certified and has ten years of experience teaching in South Korea and has taught both elementary and middle school.  He has also taken part in programs designed for high school, university, and adult ESL students.",
         "img": "Aaron_Pyle.jpg",
         "media": ["", ""]
-    }, {
+      },
+      {
         "title": "How to Encourage EFL Students to Speak English Freely in a Conversation Class",
         "name": "Hyukbin Kwon",
         "nickname": "Binny",
@@ -51,7 +55,8 @@
         "bio": "English Conversation Teacher at Wonkwang Health Science University",
         "img": "Hyukbin_Kwon.jpg",
         "media": ["", ""]
-    }, {
+      },
+      {
         "title": "Integrating Cultural Lessons within the EFL Classroom",
         "name": "Alicia Aukema",
         "nickname": "Alicia",
@@ -64,7 +69,8 @@
         "bio": "F. Alicia Aukema is an ESL professor at Chongshin University and is working on a Master’s degree in intercultural studies. She has been teaching English for nine years in Korea, Canada, and the United States. Her experiences come from teaching many levels including elementary school, high school, and University. Although most of her students have been Korean, she has taught students from other cultures as well. Her studies have led her to do extensive research on the significance of cultural lenses within the classroom and seek to implement more cultural awareness for students as well as teachers.",
         "img": "Alicia_Aukema.jpg",
         "media": ["", ""]
-    }, {
+      },
+      {
         "title": "Small Talk = Big Smiles",
         "name": "Lisa Kim",
         "nickname": "Lisa",
@@ -77,7 +83,8 @@
         "bio": "Lisa Kim has been on the road of helping students learn how to properly communicate in English for 12 years.  Her teaching specialty lies in English conversation.  She is a strong believer that every student can master English (or any language) if learned properly.  For the purpose of encouragement, she constantly reminds her students to imagine learning English as if you were learning how to ride a bicycle – with every fall, you get up, try again and you get better with continuous practice and determination, until you actually learn it and enjoy the benefits of this skill.  Her style of teaching is usually interactive and communicative rather than being faithfully stuck to every page of a given textbook.  Lisa has been living in Korea for nine years. At present, she teaches at Jeonju University and sometimes writes for the school newspaper.",
         "img": "Lisa_Kim.png",
         "media": ["", ""]
-    }, {
+      },
+      {
         "title": "Bringing Augmented Reality into the EFL Classroom",
         "name": "Susan Webster",
         "nickname": "Susan",
@@ -90,5 +97,56 @@
         "bio": "<p>Susan Webster holds an MSc TESOL from Edinburgh University and a B/Des Hons from Duncan of Jordanstone, Dundee University. She is currently employed at Jeonju University, South Korea, where she teaches English conversation classes. Her career as an EFL instructor has included delivering storytelling workshops to new JLP programme teachers, S.Korea, conducting methodology workshops for Korean elementary teachers, teaching English in, elementary and secondary schools and universities in South Korea, Japan and her native Scotland.</p><p>Susan is passionate about all aspects of language-teaching methodology and strives to produce meaningful, engaging and creative lessons for her learners. She is particularly interested in issues relating to e-learning and teaching and published research exploring language use in the virtual world of Second Life.</p><p>When Susan is not teaching or writing for her blog, you’ll either find her doing yoga, bouldering, running or cycling around Korea. s.webster.jju@gmail.com / www.eltsparks.wordpress.com</p>",
         "img": "Susan_Webster.jpg",
         "media": ["", ""]
-    }]
+      }
+  ],
+  "team": [
+    {
+      "name": "Ingrid Zwaal",
+      "title": "President",
+      "email": "",
+      "site": "",
+      "bio": "<p>Ingrid Zwaal is currently the foreign teacher who has been in Jeonju the longest at 23 years. She works at Jeonju University when not playing volleyball or with her three badly behaving dogs. She writes a weekly news column in a local paper about herself and her adventures.</p>",
+      "img": "Ingrid_Zwaal.png"
+    },
+    {
+      "name": "Suhhee Kang",
+      "title": "Vice President",
+      "email": "",
+      "site": "",
+      "bio": "<p>Suhhee Kang has taught English since 1998. She has taught in several Hagwons including Min Byung Chul, Jung Cheol, Jongno and E.Bo Young's talking club in Seoul and Bundang before moving to Jeonju.</p><p>Suhhee is currently a self employed tutor and enjoys teaching. She is especially happy to see her students improving their language skills. Autonomy is important her classroom, and her expectations are that the students take control of their learning process. She also does her best to promote a comfortable learning environment where her students don't feel afraid of making mistakes.</p>",
+      "img": "Suhhee_Kang.png"
+    },
+    {
+      "name": "Susan Webster",
+      "title": "Workshop Coordinator",
+      "email": "s.webster.jju@gmail.com",
+      "site": "http://eltsparks.wordpress.com",
+      "bio": "<p>Susan Webster holds an MSc TESOL from Edinburgh University and a B/Des Hons from Duncan of Jordanstone, Dundee University. She is currently employed at Jeonju University, South Korea, where she teaches English conversation classes. Her career as an EFL instructor has included delivering storytelling workshops to new JLP programme teachers, S.Korea, conducting methodology workshops for Korean elementary teachers, teaching English in, elementary and secondary schools and universities in South Korea, Japan and her native Scotland.</p><p>Susan is passionate about all aspects of language-teaching methodology and strives to produce meaningful, engaging and creative lessons for her learners. She is particularly interested in issues relating to e-learning and teaching and published research exploring language use in the virtual world of Second Life.</p><p>When Susan is not teaching or writing for her blog, you’ll either find her doing yoga, bouldering, running or cycling around Korea. <a href=\"mailto:s.webster.jju@gmail.com\">s.webster.jju@gmail.com / <a href=\"http://eltsparks.wordpress.com\">eltsparks.wordpress.com</a></p>",
+      "img": "Susan_Webster.jpg"
+    },
+    {
+      "name": "Andy Webster",
+      "title": "Workshop Coordinator",
+      "email": "prof.a.webster@gmail.com",
+      "site": "http://eltsparks.wordpress.com",
+      "bio": "<p>Andy Webster holds a degree in Psychology and Philosophy from the University of Dundee and an MSc in TESOL from Edinburgh University. He completed his CELTA in 2013 and has published research exploring the pedagogical potential of virtual worlds and Web 2.0 tools. He has taught a variety of different learners in Japan and South Korea. This experience has provided him with a wonderful opportunity to develop the skills and knowledge required to teach different levels of English to those with varying learning abilities. He is especially keen to investigate new teaching methods and enjoys the continuing challenges associated with English language teaching. He currently enjoys teaching at Jeonju University where he continually seeks to provide an engaging, nurturing and creative learning environment for all students.</p>",
+      "img": "Andy_Webster.jpg"
+    },
+    {
+      "name": "Aaron Snowberger",
+      "title": "Web Editor",
+      "email": "aaron.jju@gmail.com",
+      "site": "https://aaron.kr",
+      "bio": "<p>Aaron Snowberger is a Google Certified Trainer, Educator, and G Suite Administrator. He's the Technology instructor at Global Prodigy Academy international high school in Jeonju where he's been instructing students and staff in G Suite since 2013. He holds a bachelor's degree in Computer Science and a master's degree in Graphic/Media Design. Aaron has lived in Jeonju since 2006, and has also taught English at Jeonju University since 2010.</p>",
+      "img": "Aaron_Snowberger.png"
+    },
+    {
+      "name": "Miriam Lee",
+      "title": "Membership Coordinator",
+      "email": "",
+      "site": "",
+      "bio": "<p>Miriam Lee, while not defending her Noraebang title or re-organizing her NPR mug collection, is most likely singing in the hallway at the Jeonju English Center, where she teaches all the fifth graders of Jeonju to sing the Do Re Mi song. She received her Bachelor of Arts degree from the University of Connecticut (in the United States) in 2003 in Art History and Anthropology, and received third place in a Care Bears coloring contest in Jersey City in 1986.</p>",
+      "img": "Miriam_Lee.png"
+    }
+  ]
 }
