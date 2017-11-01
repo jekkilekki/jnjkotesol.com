@@ -27,6 +27,8 @@ app.use( require( './routes/feedback' ) );
 app.use( require( './routes/api' ) );
 app.use( require( './routes/chat' ) );
 app.use( require( './routes/team' ) );
+app.use( require( './routes/privacy' ) );
+app.use( require( './routes/conduct' ) );
 
 
 var server = app.listen( app.get( 'port' ), function() {

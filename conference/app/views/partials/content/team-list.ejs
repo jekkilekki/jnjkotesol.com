@@ -1,4 +1,6 @@
 <div class="container">
+
+  <h2 class="page-section-title">Organizing Team</h2>
     <!-- http://davist11.github.io/css-diamond-grid/# -->
   <div class="grid">
 
@@ -23,7 +25,8 @@
 
 
             <div class="speaker-info">
-                <h2 class="speaker-bio-title">About <%= member.nickname %></h2>
+                <h3 class="speaker-bio-title"><%= member.name %></h3>
+                <p class="team-member-title"><%= member.title %></p>
                 <p class="speaker-bio"><%- member.bio %></p>
             </div>
         </div><!-- .speaker-info-section -->

@@ -3,7 +3,7 @@
     <head>
         <% include partials/template/head.ejs %>
     </head>
-    <body id="<% pageID %>">
+    <body id="<%= pageID %>">
 
         <% include partials/template/header-menu.ejs %>
 
@@ -11,7 +11,7 @@
             <% include partials/content/hero.ejs %>
 
             <section class="page-section chat gradient">
-                <div class="container">
+                <div class="container small">
                   <!-- <header class="chat-header">
                       <h4 class="h3 chat-title">Conference Chat</h4>
                       <p class="text-muted">Welcome...add your message using the form to the side.</p>

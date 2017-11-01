@@ -133,20 +133,20 @@
       "img": "Andy_Webster.jpg"
     },
     {
-      "name": "Aaron Snowberger",
-      "title": "Web Editor",
-      "email": "aaron.jju@gmail.com",
-      "site": "https://aaron.kr",
-      "bio": "<p>Aaron Snowberger is a Google Certified Trainer, Educator, and G Suite Administrator. He's the Technology instructor at Global Prodigy Academy international high school in Jeonju where he's been instructing students and staff in G Suite since 2013. He holds a bachelor's degree in Computer Science and a master's degree in Graphic/Media Design. Aaron has lived in Jeonju since 2006, and has also taught English at Jeonju University since 2010.</p>",
-      "img": "Aaron_Snowberger.png"
-    },
-    {
       "name": "Miriam Lee",
       "title": "Membership Coordinator",
       "email": "",
       "site": "",
       "bio": "<p>Miriam Lee, while not defending her Noraebang title or re-organizing her NPR mug collection, is most likely singing in the hallway at the Jeonju English Center, where she teaches all the fifth graders of Jeonju to sing the Do Re Mi song. She received her Bachelor of Arts degree from the University of Connecticut (in the United States) in 2003 in Art History and Anthropology, and received third place in a Care Bears coloring contest in Jersey City in 1986.</p>",
       "img": "Miriam_Lee.png"
+    },
+    {
+      "name": "Aaron Snowberger",
+      "title": "Web Editor",
+      "email": "aaron.jju@gmail.com",
+      "site": "https://aaron.kr",
+      "bio": "<p>Aaron Snowberger is a Google Certified Trainer, Educator, and G Suite Administrator. He's the Technology instructor at Global Prodigy Academy international high school in Jeonju where he's been instructing students and staff in G Suite since 2013. He holds a bachelor's degree in Computer Science and a master's degree in Graphic/Media Design. Aaron has lived in Jeonju since 2006, and has also taught English at Jeonju University since 2010.</p>",
+      "img": "Aaron_Snowberger.png"
     }
   ]
 }

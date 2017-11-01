@@ -174,7 +174,7 @@ sub {
 img {
 	border: 0;
 	display: block;
-  max-width: 100%;
+  /*max-width: 100%;*/
 }
 
 svg:not(:root) {
@@ -1816,7 +1816,8 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   padding-bottom: 2rem;
 }
 
-#speaker-single .speaker-info-section {
+#speaker-single .speaker-info-section,
+#team .speaker-info-section {
     padding-left: 380px;
 }
 
@@ -1974,7 +1975,12 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
  * Location Page
  * -----------------------------------------------------------------------------
  */
-#location .page-section-title {
+#location img {
+  max-width: 100%;
+}
+
+#location .page-section-title,
+.feedback .page-section-title {
   text-align: left;
   color: white;
   text-shadow: 0px 2px 4px rgba(0,0,0,0.36);
@@ -1993,6 +1999,10 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 #feedback .buzz {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.feedback {
+  padding-top: 2rem;
 }
 
   .feedback .container,
@@ -2212,3 +2222,27 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
     right: auto;
     left: -40px;
   }
+
+/**
+ * -----------------------------------------------------------------------------
+ * Team
+ * -----------------------------------------------------------------------------
+ */
+
+ #team .page-section-title {
+   color: white;
+   text-shadow: 0px 2px 4px rgba(0,0,0,0.36);
+   padding-top: 2rem;
+ }
+
+.team-member {
+  min-height: 360px;
+}
+
+.team-member-title {
+    margin-top: -0.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
