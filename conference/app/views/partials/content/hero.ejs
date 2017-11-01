@@ -3,7 +3,11 @@
   <h1><span class="screen-reader-text">Jeonju-North Jeolla KOTESOL</span> 2017 Regional Conference</h1>
 </hgroup>
 <figure class="hero gradient">
-  <img src="/img/bg/5-color-plain.jpg">
+  <% if ( pageID == 'home' ) { %>
+    <img src="/img/bg/5-color-plain.jpg">
+  <% } else { %>
+    <img src="/img/bg/5-color-short.jpg">
+  <% } %>
 
   <div class="svg-container header-svg svg-block">
     <% include ../template/svgslant.ejs %>

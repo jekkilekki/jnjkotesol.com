@@ -10,7 +10,7 @@ router.get( '/chat', function( request, response ) {
 
     response.render( 'chat', {
         pageTitle: 'Chat',
-        pageID: 'chat',
+        pageID: 'chat'
     }); // views/index.ejs
 });
 

@@ -1,6 +1,9 @@
-<div class="svg-container partners-svg svg-block">
-  <% include ../template/svgslant.ejs %>
-</div>
+<% if ( pageID == 'home' ) { %>
+  <div class="svg-container partners-svg svg-block">
+    <% include ../template/svgslant.ejs %>
+  </div>
+<% } %>
+
 <!-- Schedule -->
 <div class="conference-schedule container">
   <h2 class="page-section-title">Conference Schedule</h2>
@@ -84,6 +87,8 @@
   </table>
 </div>
 
-<div class="svg-container header-svg svg-block">
-  <% include ../template/svgslant.ejs %>
-</div>
+<% if ( pageID == 'home' ) { %>
+  <div class="svg-container header-svg svg-block">
+    <% include ../template/svgslant.ejs %>
+  </div>
+<% } %>

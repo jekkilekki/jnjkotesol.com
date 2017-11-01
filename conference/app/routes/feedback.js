@@ -11,7 +11,7 @@ router.get( '/feedback', function( request, response ) {
 
     response.render( 'feedback', {
         pageTitle: 'Feedback',
-        pageID: 'feedback',
+        pageID: 'feedback'
     }); // views/index.ejs
 });
 

@@ -1,3 +1,9 @@
+<% if ( pageID !== 'home' ) { %>
+  <div class="svg-container map-svg svg-block">
+    <% include ../template/svgslant.ejs %>
+  </div>
+<% } %>
+
 <div class="container">
   <ul class="buzz-list">
     <li class="buzz-list-item">
@@ -73,10 +79,17 @@
       </p>
     </li>
   </ul>
-
-  <h2 class="subscriber-list-title">Subscribe to the JNJ KOTESOL email list</h2>
-  <form class="subscriber-list">
-    <input class="subscriber-email form-control" type="email" placeholder="Your Email" />
-    <input class="button subscriber-submit" type="submit" value="Get on the list!" />
-  </form>
+  <% if ( pageID == 'home' ) { %>
+    <h2 class="subscriber-list-title">Subscribe to the JNJ KOTESOL email list</h2>
+    <form class="subscriber-list">
+      <input class="subscriber-email form-control" type="email" placeholder="Your Email" />
+      <input class="button subscriber-submit" type="submit" value="Get on the list!" />
+    </form>
+  <% } %>
 </div>
+
+<% if ( pageID !== 'home' ) { %>
+  <div class="svg-container footer-svg svg-block">
+    <% include ../template/svgslant.ejs %>
+  </div>
+<% } %>

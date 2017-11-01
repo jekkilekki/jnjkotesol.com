@@ -10,7 +10,7 @@
         <div class="grid">
 
           <div class="grid-item grid-title">
-            <div class="grid-inner"><a href="/speakers">More Speakers</a></div>
+            <div class="grid-inner"><a href="/speakers"><% if ( pageID !== 'schedule' ) { %>More <% } %>Speakers</a></div>
           </div>
 
         <% listSpeakers.forEach( function( speaker ) { %>

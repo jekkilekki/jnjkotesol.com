@@ -174,6 +174,7 @@ sub {
 img {
 	border: 0;
 	display: block;
+  max-width: 100%;
 }
 
 svg:not(:root) {
@@ -351,9 +352,9 @@ body {
 
 p {
   font-family: "Fira Sans Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 1.5rem;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -388,6 +389,12 @@ h6 {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.note {
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+  display: block;
 }
 
 /*--------------------------------------------------------------
@@ -1068,7 +1075,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
     bottom: 0;
     width: 100%;
 /*     height: 0; */
-    padding-top: 7.93650794%;
+    /*padding-top: 7.93650794%;*/
 }
 
 .header-svg {
@@ -1248,6 +1255,14 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   font-size: 2.5rem;
   text-align: center;
   margin-top: 0;
+}
+
+.page-section-subtitle {
+  margin-top: 0;
+}
+
+.full-bleed {
+  margin: 2rem auto;
 }
 
 .subscriber-list-title {
@@ -1786,17 +1801,27 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
     font-weight: 300;
 }
 
+#speakers .buzz {
+  margin-top: 0;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
 /**
  * -----------------------------------------------------------------------------
  * Speaker SINGLE Page
  * -----------------------------------------------------------------------------
  */
+#speaker-single .speakers {
+  padding-bottom: 2rem;
+}
+
 #speaker-single .speaker-info-section {
     padding-left: 380px;
 }
 
 #speaker-single .grid-item.photo {
-    margin-top: -3rem;
+    margin-top: -2rem;
     background: #a0f;
     z-index: 5;
     border: 1px solid #a0f;
@@ -1807,7 +1832,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 #speaker-single .speaker-meta {
     visibility: visible;
     position: relative;
-    top: 3.5rem;
+    top: 5.5rem;
     max-width: 100%;
 }
 
@@ -1927,12 +1952,49 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
    margin-top: -18.875%;
  }
 
+ /**
+  * -----------------------------------------------------------------------------
+  * Schedule Page
+  * -----------------------------------------------------------------------------
+  */
+#schedule .conference-schedule .page-section-title {
+  padding-top: 2rem;
+}
+
+#schedule .conference-schedule {
+  padding-bottom: 2rem;
+}
+
+#schedule .grid {
+  padding: 6rem;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * Location Page
+ * -----------------------------------------------------------------------------
+ */
+#location .page-section-title {
+  text-align: left;
+  color: white;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.36);
+  padding-top: 2rem;
+}
+
+.conference-directions {
+  padding-bottom: 2rem;
+}
 
  /**
   * -----------------------------------------------------------------------------
   * Feedback & Chat
   * -----------------------------------------------------------------------------
   */
+#feedback .buzz {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
   .feedback .container,
   .chat-window {
     display: flex;
