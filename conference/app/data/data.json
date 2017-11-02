@@ -148,5 +148,168 @@
       "bio": "<p>Aaron Snowberger is a Google Certified Trainer, Educator, and G Suite Administrator. He's the Technology instructor at Global Prodigy Academy international high school in Jeonju where he's been instructing students and staff in G Suite since 2013. He holds a bachelor's degree in Computer Science and a master's degree in Graphic/Media Design. Aaron has lived in Jeonju since 2006, and has also taught English at Jeonju University since 2010.</p>",
       "img": "Aaron_Snowberger.png"
     }
+  ],
+  "sponsors": [
+    {
+      "name": "Jeonju University",
+      "description": "Jeonju University is a private university located on the west end of Jeonju. It has been host to the Jeonju-North Jeolla KOTESOL chapters workshops and Conferences since 2014.",
+      "address": "전라북도 전주시 완산구 천잠로 303",
+      "phone": "1577-7177",
+      "map": "http://naver.me/GueSCeth",
+      "website": "http://www.jj.ac.kr/",
+      "level": "host",
+      "amount": "400,000",
+      "gift": "rooms",
+      "logo": "jju-logo.png",
+      "media": [""]
+    },
+    {
+      "name": "KOTESOL",
+      "description": "KOTESOL is a non-profit, professional organization that seeks to assist teachers in self-development and improve English Language Teaching in Korea.",
+      "address": "",
+      "phone": "",
+      "map": "",
+      "website": "https://koreatesol.org/",
+      "level": "host",
+      "amount": "",
+      "gift": "",
+      "logo": "kotesol-logo.png",
+      "media": [""]
+    },
+    {
+      "name": "TOP English Bookstore",
+      "description": "One of the oldest, largest, and best known English bookstores in Jeonju. Located near Gaeksa.",
+      "address": "전북 전주시 완산구 동문길 110",
+      "phone": "063-285-6888",
+      "map": "http://naver.me/xi0JL0WB",
+      "website": "",
+      "level": "gold",
+      "amount": "200,000",
+      "gift": "donation",
+      "logo": "top-logo.png",
+      "media": [""]
+    },
+    {
+      "name": "Tacocino",
+      "description": "A Mexican taco restaurant located in Shinsikaji near Jeonju University. Specializes in tacos, quesadillas, burritos, and fajitas.",
+      "address": "전북 전주시 완산구 효자동3가 1534-3",
+      "phone": "063-227-8558",
+      "map": "http://naver.me/5vAEJdag",
+      "website": "https://www.facebook.com/Tacocina-%ED%83%80%EC%BD%94%EC%94%A8%EB%82%98-230582780692767/",
+      "level": "silver",
+      "amount": "100,000",
+      "gift": "vouchers",
+      "logo": "tacocina-logo.png",
+      "media": [""]
+    },
+    {
+      "name": "Lemon Tree Cafe",
+      "description": "A Korean coffee shop located down on the road between Gaeksa and Hanok Village.",
+      "address": "전북 전주시 완산구 전라감영로 75",
+      "phone": "063-285-0005",
+      "map": "http://naver.me/5bbqCFuG",
+      "website": "",
+      "level": "silver",
+      "amount": "100,000",
+      "gift": "vouchers + donation",
+      "logo": "lemontree-logo.png",
+      "media": [""]
+    },
+    {
+      "name": "Yega Restaurant",
+      "description": "A traditional style Korean restaurant located at the base of Moak Mountain and specializing in healthy Korean food, particularly Chungkukjang.",
+      "address": "전북 완주군 구이면 모악산길 112",
+      "phone": "",
+      "map": "http://naver.me/5nM2hnF3",
+      "website": "",
+      "level": "bronze",
+      "amount": "50,000",
+      "gift": "donation",
+      "logo": "yega-logo.png",
+      "media": [""]
+    },
+    {
+      "name": "English Garden",
+      "description": "A unique Patchwork Studio with bright interior decor, artwork, old Korean sewing machines, and a large collection of (even English) books.",
+      "address": "전주시 완산구 화산천변 3길 4-3",
+      "phone": "010-5008-3963",
+      "map": "http://naver.me/xdodjYGu",
+      "website": "",
+      "level": "bronze",
+      "amount": "50,000",
+      "gift": "donation",
+      "logo": "english-garden-logo.png",
+      "media": [""]
+    },
+    {
+      "name": "March Rabbit",
+      "description": "A salad can even qualify as a filling meal.",
+      "address": "전라북도 전주시 완산구 홍산남로 30",
+      "phone": "063-226-1974",
+      "map": "http://naver.me/G6hzRKmr",
+      "website": "http://marchrabbit.co.kr/",
+      "level": "partner",
+      "amount": "30,000",
+      "gift": "vouchers",
+      "logo": "march-rabbit-logo.png",
+      "media": [""]
+    },
+    {
+      "name": "Solasta Yoga",
+      "description": "A non-profit yoga club in Jeonju, South Korea offering yoga asana, pranayama, meditation and a compassionate community in a supportive and beautiful space.",
+      "address": "완산구 홍산남로 29-15 휴본빌딩 3층",
+      "phone": "",
+      "map": "http://naver.me/xeYZFhCk",
+      "website": "https://www.facebook.com/groups/solastayoga/",
+      "level": "partner",
+      "amount": "20,000",
+      "gift": "FREE sessions",
+      "logo": "solasta-logo.png",
+      "media": [""]
+    }
+  ],
+  "buzz": [
+    {
+      "name": "Andrew Griffiths",
+      "location": "Korea",
+      "link": "",
+      "comment": "Just wanted to say a big thank you for your welcome and your support yesterday - I had a lot of fun presenting and I was really impressed with how high participation is in your chapter - amazing!",
+      "img": "Andrew_Griffiths.jpg"
+    },
+    {
+      "name": "Joseph Greenwood",
+      "location": "Soongil University",
+      "link": "",
+      "comment": "It was truly my pleasure. It was wonderful to meet you all. Jeonju was beautiful, we had a really great Sunday exploring. Fascinating city.",
+      "img": "Joseph_Greenwood.jpg"
+    },
+    {
+      "name": "Leonie Overbeek",
+      "location": "Namyang/Gojeong Elementary",
+      "link": "",
+      "comment": "I had a blast! I love seeing my Jeonju friends that I only catch up with at conferences.",
+      "img": "Leonie_Overbeek.jpg"
+    },
+    {
+      "name": "Petra Glithero-Baldwin",
+      "location": "Korea",
+      "link": "",
+      "comment": "Thank you all for your hospitality and organizing a great chapter meeting. It was my pleasure to be a part of it.",
+      "img": "Petra.png"
+    },
+    {
+      "name": "Stewart Gray",
+      "location": "Danguk University",
+      "link": "",
+      "comment": "Thanks very much again for inviting me. It was an enjoyable workshop. Hope I'll see you all again before too long.",
+      "img": "Stewart_Gray.jpg"
+    },
+    {
+      "name": "Michael Griffin",
+      "location": "Danguk University",
+      "link": "",
+      "comment": "Hello and thank you again for having us. We really enjoyed the session and talking to people. It was a really nice group.",
+      "img": "Michael_Griffin.jpg"
+    }
   ]
 }

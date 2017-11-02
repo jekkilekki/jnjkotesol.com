@@ -8,11 +8,13 @@ var router = express.Router();
 router.get( '/', function( request, response ) {
     var data = request.app.get( 'appData' );
     var pageSpeakers = data.speakers;
+    var feedback = data.buzz;
 
     response.render( 'index', {
         pageTitle: 'Home',
         pageID: 'home',
-        speakers: pageSpeakers
+        speakers: pageSpeakers,
+        buzz: feedback
     }); // views/index.ejs
 });
 
