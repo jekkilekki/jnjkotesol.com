@@ -216,6 +216,32 @@
       "media": [""]
     },
     {
+      "name": "Cambridge University Press",
+      "description": "Cambridge University Press dates from 1534 and is part of the University of Cambridge. Our mission is to unlock people's potential with the best learning and research solutions.",
+      "address": "",
+      "phone": "",
+      "map": "",
+      "website": "",
+      "level": "silver",
+      "amount": "120,000",
+      "gift": "books",
+      "logo": "cambridge-logo.png",
+      "media": [""]
+    },
+    {
+      "name": "The Liter Coffee",
+      "description": "A cheaper, more affordable coffee, up to 1 liter in capacity.",
+      "address": "전라북도 전주시 완산구 효자동3가 1694-5",
+      "phone": "063-227-1181",
+      "map": "http://naver.me/5cH9nbQC",
+      "website": "http://www.theliter.co.kr/",
+      "level": "bronze",
+      "amount": "56,000",
+      "gift": "vouchers",
+      "logo": "liter-logo.png",
+      "media": [""]
+    },
+    {
       "name": "Yega Restaurant",
       "description": "A traditional style Korean restaurant located at the base of Moak Mountain and specializing in healthy Korean food, particularly Chungkukjang.",
       "address": "전북 완주군 구이면 모악산길 112",
