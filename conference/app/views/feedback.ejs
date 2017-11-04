@@ -12,6 +12,11 @@
 
             <section class="page-section feedback gradient">
                 <div class="container">
+                  <aside class="recent-feedback">
+                      <h2 class="page-section-title">Recent Feedback</h2>
+                      <ul class="feedback-messages"></ul>
+                  </aside>
+
                   <form class="feedback-form">
                     <h4 class="feedback-form-title">Leave your feedback</h4>
                     <div class="form-group">
@@ -26,21 +31,20 @@
                       <label for="feedback-form-message">Message</label>
                       <textarea type="text" placeholder="Enter your message" class="form-control" id="feedback-form-message" rows="6"></textarea>
                     </div>
-                    <input type="hidden" id="feedback-form-type">
-                    <button type="submit" id="positive-feedback" class="button btn-default positive-feedback pull-right form-submit">
+                    <!-- <input type="hidden" id="feedback-form-type"> -->
+                    <!-- <button type="submit" id="negative-feedback" class="button negative-feedback button-inverse pull-right form-submit">
+                      <i class="fa fa-thumbs-down"></i><span class="screen-reader-text">Negative Feedback</span>
+                    </button> -->
+                    <!-- <small>The Negative Feedback button will open your email application and allow you to compose a message.</small>
+                    <a class="button negative-feedback button-inverse form-submit" href="mailto:jnjconference@gmail.com">
+                      <i class="fa fa-thumbs-down"></i><span class="screen-reader-text">Negative Feedback</span>
+                    </a> -->
+                    <button type="submit" id="positive-feedback" class="button positive-feedback form-submit">
                       <i class="fa fa-thumbs-up"></i><span class="screen-reader-text">Positive Feedback</span>
                     </button>
-                    <button type="submit" id="negative-feedback" class="button negative-feedback button-inverse pull-right form-submit">
-                      <i class="fa fa-thumbs-down"></i><span class="screen-reader-text">Negative Feedback</span>
-                    </button>
+                    <small>Problems? Send an <a href="mailto:jnjconference@gmail.com">Email</a></small>
                   </form>
-
-                  <aside class="recent-feedback">
-                      <h2 class="page-section-title">Recent Feedback</h2>
-
-                      <ul class="feedback-messages"></ul>
-                  </aside>
-    </div><!-- container -->
+                </div><!-- container -->
             </section>
 
             <section class="page-section buzz gradient">

@@ -2,10 +2,12 @@
 var socket = io();
 var chatUsername = document.querySelector( '#chat-username' );
 var chatMessage = document.querySelector( '#chat-message' );
+var nameFormGroup = document.querySelector( '.name-form-group' );
 
 chatUsername.onchange = function() {
   chatUsername.setAttribute( "disabled", true );
   chatUsername.className = 'form-control disabled';
+  nameFormGroup.className = 'form-group name-form-group disabled';
 
   // Possibly allow users to change their Username in chat later
   // var changeButton = document.createElement( 'span' );
@@ -43,7 +45,7 @@ function showMessage( data ) {
     var time = formatTime( now );
 
     if ( chatUsername.value == data.username ) {
-        newMessageBox.className = 'chat-text user-text';
+        newMessageBox.className = 'user-text';
         newMessageBox.innerHTML = '<p class="chat-message-text">' + data.message + '<span class="chat-timestamp">' + time + '</span></p>';
     } else {
         newMessageBox.className = 'chat-text';

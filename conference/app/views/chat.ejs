@@ -17,12 +17,19 @@
                       <p class="text-muted">Welcome...add your message using the form to the side.</p>
                     </header> -->
                   <article class="chat-window">
+                    <div class="panel chat-panel panel-default">
+                      <h4 class="page-section-title">Conference Chat</h4>
+                      <div class="panel-body chat-display"></div>
+                      <!-- panel-body -->
+                    </div>
+
+
                     <!-- chat-header -->
                     <form name="chatForm" class="form-horizontal chat-form">
-                      <div class="form-group">
+                      <div class="form-group name-form-group">
                         <label for="chat-username" class="col-sm-2 control-label">Name</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" id="chat-username" required placeholder="Enter your name">
+                          <input type="text" class="form-control" id="chat-username" required placeholder="Your name">
                         </div>
                         <!-- col-sm-10 -->
                       </div>
@@ -31,9 +38,9 @@
                         <label for="chat-message" class="col-sm-2 control-label">Message</label>
                         <div class="col-sm-10">
                           <div class="input-group">
-                            <input type="text" placeholder="Enter a message, then press enter" class="form-control" id="chat-message" rows="2" autocomplete="off" required>
+                            <input type="text" placeholder="Your message, then ENTER" class="form-control" id="chat-message" rows="2" autocomplete="off" required>
                             <span class="input-group-btn">
-                                  <button id="chat-submit" class="button form-submit pull-right btn-info" type="submit"><i class="fa fa-comments-o"></i> Chat</button>
+                                  <button id="chat-submit" class="button form-submit" type="submit"><i class="fa fa-comments-o"></i> Send</button>
                                 </span>
                           </div>
                           <!-- input-group -->
@@ -42,17 +49,15 @@
                       </div>
                       <!-- form-group -->
                     </form>
-
-                    <div class="panel chat-panel panel-default">
-                      <h4>Conference Chat</h4>
-                      <div class="panel-body chat-display"></div>
-                      <!-- panel-body -->
-                    </div>
                     <!-- panel-default -->
                   </article>
                   <!-- article -->
     </div><!-- container -->
             </section>
+
+            <div class="svg-container footer-svg svg-block">
+              <% include partials/template/svgslant.ejs %>
+            </div>
         </main>
 
         <% include partials/template/footer.ejs %>
