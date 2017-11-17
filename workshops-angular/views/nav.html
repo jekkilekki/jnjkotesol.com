@@ -1,0 +1,29 @@
+<header class="site-header">
+  <div class="site-banner">
+    <p class="container">Nov 11, 2017 / 1pm / <a ng-href="/location">Jeonju</a></p>
+  </div>
+
+  <div class="site-menu-bar">
+    <div class="container">
+      <figure class="logo">
+        <a ng-href="#!/">
+          <img class="logo" src="/img/kotesol-logo.png">
+        </a>
+      </figure>
+      <nav class="site-navigation">
+        <button class="site-mobile-menu-button"><i class="fa fa-bars"></i> Menu</button>
+        <ul class="site-menu">
+          <li class="site-menu-item"><a ng-hide="currentUser" ng-href="#!/register">Register</a></li>
+          <li role="separator" class="site-menu-item supplementary line"></li>
+          <li class="site-menu-item supplementary"><a ng-href="/team">About</a></li>
+          <li class="site-menu-item supplementary"><a ng-href="/code-of-conduct">Code of Conduct</a></li>
+          <li class="site-menu-item supplementary"><a ng-href="/privacy">Privacy Policy</a></li>
+          <li class="site-menu-item supplementary"><a ng-href="mailto:jnjconference@gmail.com">Contact Us</a></li>
+        </ul>
+        <a class="button ticket-button" ng-hide="currentUser" ng-href="#!/login">Login</a>
+      </nav>
+    </div>
+    <!-- .container -->
+  </div>
+  <!-- .site-menu-bar -->
+</header>
