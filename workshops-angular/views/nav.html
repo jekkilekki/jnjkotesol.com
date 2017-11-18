@@ -12,7 +12,11 @@
       <nav class="site-navigation">
         <button class="site-mobile-menu-button"><i class="fa fa-bars"></i> Menu</button>
         <ul class="site-menu">
+          <li class="site-menu-item"><a ng-show="currentUser" ng-href="#!/workshops">Workshops
+            <span ng-show="howManyWorkshops" class="badge">{{howManyWorkshops}}</span></a>
+          </li>
           <li class="site-menu-item"><a ng-hide="currentUser" ng-href="#!/register">Register</a></li>
+          
           <li role="separator" class="site-menu-item supplementary line"></li>
           <li class="site-menu-item supplementary"><a ng-href="/team">About</a></li>
           <li class="site-menu-item supplementary"><a ng-href="/code-of-conduct">Code of Conduct</a></li>

@@ -1,0 +1,96 @@
+<section id="checkins-list" class="app-section checkins-list gradient">
+  
+  <hgroup class="page-title app-title container">
+    <img src="https://conference.jnjkotesol.com/img/jnj-kotesol-logo-2.png">
+    <h1><span class="screen-reader-text">Jeonju-North Jeolla KOTESOL</span> Workshop App</h1>
+  </hgroup>
+  
+  <div class="container small">
+    <div class="text-intro">
+      <h2 class="app-section-title">Check-ins</h2>
+      <p>Here's a list of all your latest check-ins.</p>
+      <p class="message" ng-show="message">{{ message }}</p>
+    </div>
+    
+    <div class="search-list">
+      <h3>Search Checkins</h3>
+      <input type="text" ng-model="query" placeholder="Search for users">
+      
+      <div class="formgroup">
+        <span class="label">by:</span>
+        <select ng-model="order">
+          <option value="firstname">First Name</option>
+          <option value="lastname">Last Name</option>
+          <option value="date">Date</option>
+        </select>
+      </div>
+      
+      <div class="formgroup">
+        <input type="radio" id="dirasc" name="direction" checked="checked"
+               ng-model="direction">
+        <label for="dirasc">asc</label>&nbsp;
+        
+        <input type="radio" id="dirdesc" name="direction" 
+               ng-model="direction" value="reverse">
+        <label for="dirdesc">desc</label>
+      </div>
+      
+      <div ng-show="currentUser" class="buttons">
+        <button class="button button-small button-pick"
+                ng-hide="recordId" ng-click="pickRandom()">Pick Random</button>
+        <button class="button button-small button-pick"
+                ng-show="recordId" ng-click="recordId=''">Reset</button>
+      </div>
+    </div>
+    
+    <ul class="userlist">
+      <li ng-class="checkin.userState" ng-repeat="checkin in checkins | orderBy: order:direction | filter: {$id: recordId, $: query}">
+        <div class="checkin">
+          
+          <div ng-show="currentUser" class="buttons">
+            <button class="button button-inverse button-small button-delete"
+                    ng-click="deleteCheckin(checkin.$id)">
+              <i class="fa fa-trash-o"></i><span></span>
+            </button>
+            <button class="button button-small button-prize"
+                    ng-click="showPrize(checkin)">
+              <i class="fa fa-trash-o"></i><span>Award Prize</span>
+            </button>
+          </div><!-- .buttons -->
+          
+          <div class="user-meta">
+            <h4>{{checkin.firstname}} {{checkin.lastname}}</h4>
+            <p>{{checkin.date | date: "MMM d,yy h:mm a"}}</p>
+          </div><!-- .user-meta -->
+          
+          <div class="show-checkins" ng-show="checkin.show">
+            <form name="myform" class="award"
+                  ng-submit="awardPrize(checkin, checkin.prizeText)"
+                  novalidate>
+              <input type="text" name="prizeText" placeholder="What are you giving?"
+                     ng-required="true" ng-model="checkin.prizeText">
+              <button class="button" type="submit"
+                      ng-disabled="myform.$invalid">+</button>
+            </form>
+            
+            <ul class="prizeslist">
+              <li class="" ng-repeat="(key, prize) in checkin.prizes">
+                <div class="prize">
+                  <div class="buttons">
+                    <button class="button button-small button-delete tooltip"
+                            ng-click="deletePrize(checkin, key)">
+                      <span>Delete this prize</span>
+                    </button>
+                  </div><!-- .buttons -->
+                  {{ prize.name }}
+                </div>
+              </li>
+            </ul>
+          </div><!-- .show-checkins -->
+          
+        </div><!-- .checkin -->
+      </li>
+    </ul><!-- .userlist -->
+  </div>
+</section>
+

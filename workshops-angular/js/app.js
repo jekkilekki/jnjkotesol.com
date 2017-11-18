@@ -16,10 +16,22 @@ myApp.config( ['$routeProvider', function($routeProvider) {
       templateUrl: 'views/login.html',
       controller: 'RegistrationController'
     }).
+  
     when( '/register', {
       templateUrl: 'views/register.html',
       controller: 'RegistrationController'
     }).
+  
+    when( '/checkins/:uid/:mid', {
+      templateUrl: 'views/checkins.html',
+      controller: 'CheckinsController'
+    }).
+  
+    when( '/checkins/:uid/:mid/checkins-list', {
+      templateUrl: 'views/checkins-list.html',
+      controller: 'CheckinsController'
+    }).
+  
     when( '/workshops', {
       templateUrl: 'views/workshops.html',
       controller: 'WorkshopsController',
@@ -29,6 +41,7 @@ myApp.config( ['$routeProvider', function($routeProvider) {
         }
       }
     }).
+  
     otherwise({
       redirectTo: '/login'
     });
