@@ -1,13 +1,12 @@
-<header class="site-header">
-  <div class="site-banner">
-    <p class="container">Nov 11, 2017 / 1pm / <a ng-href="/location">Jeonju</a></p>
-  </div>
+<!--  <div class="site-banner">-->
+<!--    <p class="container">Nov 11, 2017 / 1pm / <a ng-href="/location">Jeonju</a></p>-->
+<!--  </div>-->
 
   <div class="site-menu-bar">
     <div class="container">
       <figure class="logo">
         <a ng-href="#!/">
-          <img class="logo" src="/img/kotesol-logo.png">
+          <img class="logo" src="https://conference.jnjkotesol.com/img/kotesol-logo.png">
         </a>
       </figure>
       <nav class="site-navigation">
@@ -21,9 +20,14 @@
           <li class="site-menu-item supplementary"><a ng-href="mailto:jnjconference@gmail.com">Contact Us</a></li>
         </ul>
         <a class="button ticket-button" ng-hide="currentUser" ng-href="#!/login">Login</a>
+      
+        <div class="userinfo" ng-show="currentUser" ng-controller="RegistrationController">
+          <p class="userinfo">Hi {{currentUser.firstname}}!
+            <a class="button ticket-button" ng-href="#!/login" ng-click="logout()">Logout</a>
+          </p>
+        </div>
       </nav>
     </div>
     <!-- .container -->
   </div>
   <!-- .site-menu-bar -->
-</header>

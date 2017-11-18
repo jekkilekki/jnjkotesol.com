@@ -20,9 +20,9 @@ myApp.config( ['$routeProvider', function($routeProvider) {
       templateUrl: 'views/register.html',
       controller: 'RegistrationController'
     }).
-    when( '/success', {
-      templateUrl: 'views/success.html',
-      controller: 'SuccessController',
+    when( '/workshops', {
+      templateUrl: 'views/workshops.html',
+      controller: 'WorkshopsController',
       resolve: {
         currentAuth: function(Authentication) {
           return Authentication.requireAuth();

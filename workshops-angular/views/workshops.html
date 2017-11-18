@@ -1,0 +1,30 @@
+<section class="app-section meetings cf">
+  <div class="container small">
+    <div class="text-intro">
+      <h1>Workshops</h1>
+      <p>{{ message }}</p>
+    </div>
+    
+    <form class="formgroup add-workshop" name="myform"
+          ng-submit="addWorkshop()"
+          novalidate>
+      
+      <fieldset>
+        <input type="text" name="workshopname" placeholder="Workshop name"
+               ng-model="workshopname" ng-required="true">
+        <p class="error validationerror"
+           ng-show="myform.workshopname.$invalid && myform.workshopname.$touched">
+        Workshop name is required</p>
+        
+        <input type="date" name="workshopdate" placeholder="Workshop date"
+               ng-model="workshopdate" ng-required="true">
+        <p class="error validationerror"
+           ng-show="myform.workshopdate.$invalid && myform.workshopdate.$touched">
+        Workshop date is required</p>
+      </fieldset>
+      
+      <button type="submit" class="button big-button"
+              ng-disabled="myform.$invalid">+</button>
+    </form>
+  </div>
+</section><!-- meetings cf -->
