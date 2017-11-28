@@ -12,6 +12,10 @@ myApp.run([ '$rootScope', '$location', function( $rootScope, $location ) {
 
 myApp.config( ['$routeProvider', function($routeProvider) {
   $routeProvider.
+    when( '/home', {
+      templateUrl: 'views/home.html'
+    }).
+  
     when( '/login', {
       templateUrl: 'views/login.html',
       controller: 'RegistrationController'
@@ -43,6 +47,6 @@ myApp.config( ['$routeProvider', function($routeProvider) {
     }).
   
     otherwise({
-      redirectTo: '/login'
+      redirectTo: '/home'
     });
 }]);

@@ -616,7 +616,6 @@ li {
   }
 }
 
-.logo:before,
 .site-menu-item a:before {
   background: #a0f;
   content: "";
@@ -631,9 +630,6 @@ li {
   transform-origin: top left;
 }
 
-.logo:hover:before {
-  transform: scaleX(1);
-}
 .site-menu-item a:hover:before {
   transform: scaleX(1.1);
 }

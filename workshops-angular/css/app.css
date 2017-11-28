@@ -58,32 +58,38 @@ input {
   padding: 15px;
   border-radius: 3px;
   border: none;
-  margin-bottom: 1rem;
+/*  margin-bottom: 1rem;*/
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+label span {
+  display: block;
+  margin-bottom: 1rem;
+  margin-top: 3px;
 }
 
 p.error {
   position: absolute;
   z-index: 2;
   color: #D50000;
-  margin-top: -3.2rem;
+  margin-top: -4.6rem;
   right: 15px;
   font-style: italic;
 }
 
 input.error {
-  outline: 2px solid red;
+  outline: 1px solid red;
 }
 
 button.big-button {
-  margin: 0 auto;
+  margin: 2rem auto 0.5rem;
   display: block;
   font-size: 1.2rem;
   font-family: "Fira Sans Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   border: none;
   padding: 1.1rem 2rem;
-  margin-bottom: 0.5rem;
+  min-width: 200px;
 }
 
 /**
@@ -119,7 +125,7 @@ button.big-button {
 .checkinslist h3 { color: #657B83; }
 
 input.ng-invalid.ng-touched {
-  outline: 2px solid #DA3637;
+  outline: 1px solid #DA3637;
 }
 
 input.ng-valid.ng-touched {
@@ -128,6 +134,559 @@ input.ng-valid.ng-touched {
 
 .ng-invalid .button {
   box-shadow: none;
-  background: gray;
+  background: #B0BEC5;
+  color: #ECEFF1;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * New App Design -- https://codepen.io/jekkilekki/pen/vWdbme
+ * -----------------------------------------------------------------------------
+ */
+/*
+.app-screen { display: none!important; }
+.app-screen.active { display: block!important; }
+
+.app-overlay { display: none!important; }
+.app-overlay.active { display: block!important; }
+*/
+
+.app-overlay .close-button {
+  cursor: pointer;
+  z-index: 4;
+}
+
+.app-overlay .close-button:hover {
+  border: none;
+  color: #a0f;
+}
+ 
+#main-menu-button {
+  z-index: 3;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  border: none;
+}
+
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+/*
+  height: calc(100vh - 104px);
+  overflow-y: scroll;
+  margin: 52px auto;
+  position: relative;
+  outline: 3px solid black;
+  box-shadow: 2px 2px 50px black;
+*/
+}
+
+.app-screen.home {
+/*  overflow: hidden;*/
+  height: 100vh;
+}
+
+/**
+ * App Menu 
+ */
+.app-menu {
+  transition: all 0.3s;
+}
+
+.app-menu-container {
+  position: absolute;
+  top: 0;
+  left: -85%;
+  background: white;
+  width: 0%;
+  height: 100%;
+  z-index:3;
+  box-shadow: 4px 0px 16px rgba(0,0,0,0.36);
+  transition: all 0.3s;
+}
+
+.app-menu-container.active {
+  left: 0;
+  width: 85%;
+}
+
+.menu-profile-section {
+  padding-top: 52px;
+}
+
+.site-menu.active {
+  display: block!important;
+  position: relative;
+}
+
+.site-menu-item a {
+  color: #212121;
+  display: block;
+  padding: 0 1rem;
+  margin: 0;
+  line-height: 1.5;
+  width: 100%;
+  position: relative;
+  
+}
+
+/**
+ *  Scrollbars
+ */
+.app-screen::-webkit-scrollbar-track,
+.app-overlay-body::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.app-screen::-webkit-scrollbar,
+.app-overlay-body::-webkit-scrollbar {
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.app-screen::-webkit-scrollbar-thumb,
+.app-overlay-body::-webkit-scrollbar-thumb {
+	background-color: #b0bec5;
+/* 	border: 2px solid #b0bec5; */
+}
+
+.app-screen-header,
+.app-screen-footer {
+  height: 52px;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+.app-screen-header {
+  background: #78909C;
   color: white;
+  line-height: 52px;
+  padding: 0 1rem;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+}
+
+.app-screen-header a {
+  color: white;
+  padding-right: 1rem;
+  float: left;
+}
+
+.app-screen-header .buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.app-screen-main-img {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 100%;
+}
+
+.hero {
+  background-image: url('http://atlanticsentinel.com/wp-content/uploads/2013/02/Seoul-South-Korea-600x400.jpg');
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  margin-top: -12px;
+}
+
+.app-screen-main-img img {
+  -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 80%, 0 80%);
+  clip-path: polygon(0 20%, 100% 20%, 100% 80%, 0 80%);
+  max-width: 100%;
+  margin: -58px 0 -46px;
+  padding: 0;
+  height: auto;
+}
+
+.app-screen-title {
+  font-weight: 400;
+  text-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+  font-size: 1.35rem;
+}
+
+.app-screen-title .number,
+.number {
+  background: #607D8B;
+  border-radius: 15px;
+  font-size: 1rem;
+  padding: 0px 5px;
+  position: relative;
+  top: -1px;
+  font-weight: 500;
+  color: white;
+}
+
+.app-screen-body {
+  padding-top: 64px;
+  background: white;
+}
+
+.home .app-screen-body {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b0bec5+0,ffffff+100 */
+  background: rgb(176,190,197); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(176,190,197,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(176,190,197,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(176,190,197,1) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0bec5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+  min-height: 100%;
+  padding: 3rem;
+}
+
+.logo {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  min-height: 140px;
+}
+
+.logo img {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.tagline {
+  font-weight: bold;
+}
+
+.intro {
+  font-size: 1rem;
+}
+
+.home .buttons {
+  margin-top: 2rem;
+}
+
+.home .buttons a {
+  display: block;
+  margin-bottom: 1rem;
+  padding: 18px;
+  font-weight: normal;
+  background: #78909C;
+}
+
+.home .buttons a:hover {
+  background: #a0f;
+  color: white;
+}
+
+.home .credits {
+  position: absolute;
+  width: calc(100% - 6rem);
+  display: block;
+  text-align: center;
+  bottom: 0;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.login-form {
+  margin-bottom: 3rem;
+}
+
+.workshops-list,
+.attendees-list {
+  list-style: none;
+/*   padding-bottom: 52px; */
+}
+
+.workshops-list .number {
+  font-size: 0.8rem;
+  background: #90A4AE;
+  float: left;
+  margin-top: 20px;
+  margin-left: 20px;
+  z-index: 1;
+}
+
+.workshops-list .number:hover {
+  background: #a0f;
+}
+
+.workshop:before {
+  content: "";
+  width: 10px;
+  height: 100%;
+  background: #78909C;
+  display: block;
+  position: absolute;
+}
+
+.workshop:nth-child(5n+1):before { background: #9C27B0;  } /* starts here - purple */
+.workshop:nth-child(5n+2):before { background: #F44336; } /* red */
+.workshop:nth-child(5n+3):before { background: #FF9800; } /* orange */
+.workshop:nth-child(5n+4):before { background: #00BCD4; } /* cyan */
+.workshop:nth-child(5n):before  { background: #2196F3; } /* blue */
+
+.workshop,
+.attendee {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #B0BEC5;
+  overflow-x: hidden;
+  transition: all 0.3s;
+  min-height: 90px;
+}
+
+.workshop:hover,
+.attendee:hover {
+  background: #CFD8DC;
+  border-bottom: 1px solid #a0f;
+}
+
+.workshop:hover .workshop-name,
+.attendee:hover .attendee-name {
+/*   border-bottom: 2px solid;
+  width: auto;
+  display: inline-block; */
+  text-decoration: underline;
+}
+
+.workshop .fa-star,
+.attendee .fa-star {
+  color: goldenrod;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.workshop-meta,
+.attendee-meta {
+  padding-left: 54px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #212121;
+}
+
+.workshop-name,
+.attendee-name {
+  font-size: 1.1rem;
+}
+
+.workshop-date,
+.attendee-email,
+.attendee-membership-date {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+
+.attendee-membership-date {
+  font-style: italic;
+}
+
+.workshop .delete-button,
+.attendee .delete-button {
+  position: absolute;
+  right: -64px;
+  top: 0;
+  text-align: center;
+  text-transform: uppercase;
+  background: red;
+  height: 100%;
+  width: 64px;
+  color: white;
+  transition: right 0.3s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.workshop .delete-button.active,
+.attendee .delete-button.active {
+  right: 0;
+}
+
+.workshop .delete-button .fa,
+.attendee .delete-button .fa {
+  font-size: 1.1rem;
+  margin-top: 40%;
+  margin-bottom: 5px;
+}
+
+.workshop .delete-button p,
+.attendee .delete-button p {
+  font-size: 0.8rem;
+}
+
+.attendee-member {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: gray;
+}
+
+.app-screen-footer {
+  bottom: 52px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.app-screen-button {
+  background: #a0f;
+  width: 100%;
+  height: 52px;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  line-height: 52px;
+}
+
+.app-screen-button.first-half {
+  position: absolute;
+  width: 50%;
+  left: 0;
+  background: #6A1B9A;
+}
+
+.app-screen-button.second-half {
+  position: absolute;
+  width: 50%;
+  right: 0;
+}
+
+.app-overlay {
+/*
+  position: fixed;
+  top: 52px;
+  left: 50%;
+  transform: translateX(-50%);
+*/
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 2;
+  display: block;
+  padding: 1rem;
+}
+
+.app-overlay-container {
+  width: 100%;
+  height: calc(100% - 52px - 2rem);
+  background: white;
+  margin-top: 52px;
+  margin-bottom: 52px;
+}
+
+.app-overlay-header {
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+/*   background: #78909C; */
+/*   color: white; */
+  line-height: 52px;
+  padding: 0 1rem;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+}
+
+.app-overlay-header a {
+  color: #212121;
+  padding-right: 1rem;
+  float: left;
+}
+
+.app-overlay-header .buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.app-overlay-title {
+  text-align: center;
+  text-indent: -1.5rem;
+}
+
+.app-overlay-container .app-overlay-footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.app-overlay-body {
+  overflow-y: scroll;
+}
+
+.add-form {
+  padding-bottom: 52px;
+}
+
+.add-form h4 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.add-form fieldset {
+  border: none;
+  padding: 1rem 1rem 0;
+}
+
+.add-form label span {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.add-form input,
+.add-form textarea {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  margin: 0;
+  padding: 10px 10px 5px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: none;
+  border-bottom: 1px solid silver;
+  background: #f1f1f1;
+}
+
+.add-form textarea {
+  min-height: 100px;
+}
+
+.add-form input[type="submit"] {
+  border: none;
+  font-size: 1rem;
+  height: 52px;
+  line-height: 52px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  bottom: 52px;
+  width: calc( 360px - 2rem);
+}
+
+.add-form .regular-submit {
+  position: static!important;
+  max-width: 100%;
+  color: white;
+  background: #78909C;
+  font-weight: normal;
+}
+
+.add-form .fa {
+  color: white;
+  position: absolute;
+  z-index: 1;
+  line-height: 52px;
+  left: 28%;
+}
+
+.add-form .speaker-meta {
+  width: 100%;
+  max-width: 100%;
+  transform: none;
 }
