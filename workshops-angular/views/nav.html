@@ -34,15 +34,23 @@
    .site-menu-bar
 -->
 
+<div id="nlTopbar" class="depth z1" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+    <div class="title ng-binding">
+      Workshops <span ng-show="howManyWorkshops" class="badge number">{{howManyWorkshops}}</span>
+    </div>
+  </div>
+<div id="nlBurger" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transition: none; transform: translate(0px, 0px) translateZ(0px) rotate(0deg); z-index: 1106;"><div id="burger-top" style="transition: none; transform-origin: 100% 100% 0px; transform: translate(0px, 0px) translateZ(0px) rotate(0deg) scale3d(1, 1, 1);"></div><div id="burger-center"></div><div id="burger-bottom" style="transition: none; transform-origin: 100% 0% 0px; transform: translate(0px, 0px) translateZ(0px) rotate(0deg) scale3d(1, 1, 1);"></div></div>
 
 <!-- App Menu -->
-<header class="app-screen-header">
+<!--<header class="app-screen-header">-->
+<!--
   <a id="main-menu-button" href="#" class="tooltip"><i class="fa fa-bars"></i><span class="screen-reader-text">Menu</span></a>
   <h1 class="app-screen-title">Workshops <span class="number">7</span></h1>
   <div class="buttons">
     <a href="#"><i class="fa fa-filter"></i><span class="screen-reader-text">Filter</span></a>
     <a href="#"><i class="fa fa-search"></i><span class="screen-reader-text">Search</span></a>
   </div>
+-->
   <div id="nlMenu" class="main"><div id="nlIcon" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><div id="dot-top"></div><div id="dot-center"></div><div id="dot-bottom"></div></div>
     <div id="nlMenuContent" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
       <!-- place your menu content here -->
@@ -53,7 +61,7 @@
       </ul>
     </div>
   </div>
-</header>
+<!--</header>-->
 
 <div id="nlDrawer" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translate(-300px, 0px) translateZ(0px) rotate(0deg); width: 300px; max-width: 300px;">
     <div class="topbar drawer large">
@@ -72,7 +80,7 @@
     </ul>
   </div>
 
-<aside id="app-menu" class="app-menu app-overlay">
+<aside id="nlDrawer" class="app-menu app-overlay">
   <div class="app-menu-container">
     <div class="menu-profile-section">
 

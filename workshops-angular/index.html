@@ -47,29 +47,8 @@
 
 </head>
 <body>
-  <header id="nlTopbar" class="site-header">
-    <nav class="cf" ng-include="'views/nav.html'"></nav>
-  </header>
-  <div class="page app-container">
-
-    <main class="cf" ng-view>
-
-    </main>
-
+  <div class="page app-container" ng-view>
+    <!-- Page content - generated -->
   </div>
 </body>
-
-<script>
-var nlOptions = {
-drawer: {
-  maxWidth: 300,
-  openCb: function(){
-    console.log('nlDrawer: openned')
-  },
-  closeCb: function(){
-    console.log('nlDrawer closed')
-  }
-}
-}
-</script>
 </html>
