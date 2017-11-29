@@ -1,4 +1,4 @@
-var myApp = angular.module( 'kotesolWorkshops', 
+var myApp = angular.module( 'kotesolWorkshops',
                            ['ngRoute', 'firebase'] );
 
 myApp.run([ '$rootScope', '$location', function( $rootScope, $location ) {
@@ -15,29 +15,29 @@ myApp.config( ['$routeProvider', function($routeProvider) {
     when( '/home', {
       templateUrl: 'views/home.html'
     }).
-  
+
     when( '/login', {
       templateUrl: 'views/login.html',
       controller: 'RegistrationController'
     }).
-  
+
     when( '/register', {
       templateUrl: 'views/register.html',
       controller: 'RegistrationController'
     }).
-  
+
     when( '/checkins/:uid/:mid', {
       templateUrl: 'views/checkins.html',
       controller: 'CheckinsController'
     }).
-  
+
     when( '/checkins/:uid/:mid/checkins-list', {
       templateUrl: 'views/checkins-list.html',
       controller: 'CheckinsController'
     }).
-  
-    when( '/workshops', {
-      templateUrl: 'views/workshops.html',
+
+    when( '/list', {
+      templateUrl: 'views/list.html',
       controller: 'WorkshopsController',
       resolve: {
         currentAuth: function(Authentication) {
@@ -45,7 +45,7 @@ myApp.config( ['$routeProvider', function($routeProvider) {
         }
       }
     }).
-  
+
     otherwise({
       redirectTo: '/home'
     });

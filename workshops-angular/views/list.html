@@ -1,32 +1,32 @@
-<section class="app-section workshops">
+<!-- <section class="app-section workshops">
   <div class="container small">
     <div class="text-intro">
       <h2 class="app-section-title">Workshops</h2>
       <p>{{ message }}</p>
     </div>
-    
+
     <form class="formgroup add-workshop" name="myform"
           ng-submit="addWorkshop()"
           novalidate>
-      
+
       <fieldset>
         <input type="text" name="workshopname" placeholder="Workshop name"
                ng-model="workshopname" ng-required="true">
         <p class="error validationerror"
            ng-show="myform.workshopname.$invalid && myform.workshopname.$touched">
         Workshop name is required</p>
-        
+
         <input type="date" name="workshopdate" placeholder="Workshop date"
                ng-model="workshopdate" ng-required="true">
         <p class="error validationerror"
            ng-show="myform.workshopdate.$invalid && myform.workshopdate.$touched">
         Workshop date is required</p>
       </fieldset>
-      
+
       <button type="submit" class="button big-button"
               ng-disabled="myform.$invalid">+</button>
-    </form>
-    
+    </form> -->
+
     <!-- Workshops List -->
     <section id="workshops-list" class="app-screen active">
       <main class="app-screen-body">
@@ -50,13 +50,13 @@
           </li>
         </ul><!-- .workshop-list -->
       </main>
-      
+
       <footer class="app-screen-footer">
         <a id="add-workshop-button" class="app-screen-button" href="#">
           <i class="fa fa-plus-circle"></i> Add Workshop
         </a>
       </footer>
-      
+
       <!-- Workshop Overlay -->
   <aside class="app-overlay">
     <div class="app-overlay-container">
@@ -64,7 +64,7 @@
     <a href="#" class="tooltip close-button"><i class="close-button fa fa-times"></i><span class="screen-reader-text">Close</span></a>
     <h1 class="app-overlay-title">Add Workshop</h1>
   </header>
-      
+
       <article class="app-overlay-body">
         <form id="add-workshop">
           <fieldset class="workshop-meta">
@@ -72,17 +72,17 @@
             <label for="workshop-name" class="workshop-name"><input type="text" id="workshop-name" placeholder="Workshop Name"><span>Workshop Name</span></label>
             <label for="workshop-date" class="workshop-date"><input type="date" id="workshop-date" placeholder="Workshop Date / Time"><span>Workshop Date / Time</span></label>
           </fieldset>
-          
+
           <fieldset class="speaker-meta">
             <h4>Speaker Info</h4>
             <label for="speaker-name" class="speaker-name"><input type="text" id="speaker-name" placeholder="Speaker Name"><span>Speaker Name</span></label>
-            
+
             <label for="speaker-title" class="speaker-title"><input type="text" id="speaker-title" placeholder="Speaker Title"><span>Speaker Title</span></label>
-            
+
             <label for="speaker-abstract" class="speaker-abstract"><textarea id="speaker-abstract" placeholder="Speaker Abstract"></textarea><span>Speaker Abstract</span></label>
-            
+
             <label for="speaker-bio" class="speaker-bio"><textarea id="speaker-bio" placeholder="Speaker Bio"></textarea><span>Workshop Date / Time</span></label>
-            
+
             <a class="add-speaker"><i class="fa fa-plus-circle"></i> Add Speaker</a>
           </fieldset>
           <i class="fa fa-plus-circle"></i><input type="submit" class="app-screen-button" value="Add Workshop">
@@ -91,5 +91,5 @@
     </div>
   </aside>
     </section>
-  </div>
+  <!-- </div>
 </section><!-- .workshops -->

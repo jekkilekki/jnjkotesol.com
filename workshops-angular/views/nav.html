@@ -13,7 +13,7 @@
             <span ng-show="howManyWorkshops" class="badge">{{howManyWorkshops}}</span></a>
           </li>
           <li class="site-menu-item"><a ng-hide="currentUser" ng-href="#!/register">Register</a></li>
-          
+
           <li role="separator" class="site-menu-item supplementary line"></li>
           <li class="site-menu-item supplementary"><a ng-href="/team">About</a></li>
           <li class="site-menu-item supplementary"><a ng-href="/code-of-conduct">Code of Conduct</a></li>
@@ -21,7 +21,7 @@
           <li class="site-menu-item supplementary"><a ng-href="mailto:jnjconference@gmail.com">Contact Us</a></li>
         </ul>
         <a class="button ticket-button" ng-hide="currentUser" ng-href="#!/login">Login</a>
-      
+
         <div class="userinfo" ng-show="currentUser" ng-controller="RegistrationController">
           <p class="userinfo">Hi {{currentUser.firstname}}!
             <a class="button ticket-button" ng-href="#!/login" ng-click="logout()">Logout</a>
@@ -29,9 +29,9 @@
         </div>
       </nav>
     </div>
-     .container 
+     .container
   </div>
-   .site-menu-bar 
+   .site-menu-bar
 -->
 
 
@@ -43,7 +43,34 @@
     <a href="#"><i class="fa fa-filter"></i><span class="screen-reader-text">Filter</span></a>
     <a href="#"><i class="fa fa-search"></i><span class="screen-reader-text">Search</span></a>
   </div>
+  <div id="nlMenu" class="main"><div id="nlIcon" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><div id="dot-top"></div><div id="dot-center"></div><div id="dot-bottom"></div></div>
+    <div id="nlMenuContent" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+      <!-- place your menu content here -->
+      <ul>
+        <li ng-click="toast.show({title:'Selected Share',timeout: 2500})">Share</li>
+        <li ng-click="toast.show({title:'Selected Edit',timeout: 2500})">Edit</li>
+        <li ng-click="toast.show({title:'Thanks!',timeout: 1000})">Hug someone</li>
+      </ul>
+    </div>
+  </div>
 </header>
+
+<div id="nlDrawer" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translate(-300px, 0px) translateZ(0px) rotate(0deg); width: 300px; max-width: 300px;">
+    <div class="topbar drawer large">
+      <img class="gravatar depth z1" src="./img/free-flat-icons-set-thumb.jpg">
+      <div class="username">
+        <strong>John</strong><br>
+        Doe
+      </div>
+    </div>
+    <ul class="nav">
+      <li><a href="#app">App</a></li>
+      <li><a href="#settings">Settings</a></li>
+      <div class="bottom">
+        <li><a href="#settings">Settings</a></li>
+      </div>
+    </ul>
+  </div>
 
 <aside id="app-menu" class="app-menu app-overlay">
   <div class="app-menu-container">
