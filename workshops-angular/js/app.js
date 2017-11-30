@@ -3,7 +3,7 @@ var myApp = angular.module( 'kotesolWorkshops',
 
 myApp.run([ '$rootScope', '$location', '$nlFramework',
            function( $rootScope, $location, $nlFramework ) {
-             
+
   $rootScope.fw = $nlFramework;
 $rootScope.drawer = $nlFramework.drawer;
 $rootScope.refresh = $nlFramework.refresh;
@@ -11,14 +11,14 @@ $rootScope.burger = $nlFramework.burger;
 $rootScope.config = $nlFramework.config;
 $rootScope.toast = $nlFramework.toast;
 $rootScope.menu = $nlFramework.menu;
-             
+
   $rootScope.$on('$routeChangeError', function( event, next, previous, error ) {
     if( error == 'AUTH_REQUIRED' ) {
       $rootScope.message = 'Sorry, you must log in to view this page.';
       $location.path( '/login' );
     } // AUTH_REQUIRED
   }); // $routeChangeError
-             
+
              /* ---------------------------
      * nlFramework:
      * set options and initialize
@@ -78,7 +78,7 @@ myApp.config( ['$routeProvider', function($routeProvider) {
       templateUrl: 'views/home.html',
       controller: 'WorkshopsController'
     }).
-  
+
     when( '/home', {
       templateUrl: 'views/home.html',
       controller: 'WorkshopsController'
@@ -107,16 +107,21 @@ myApp.config( ['$routeProvider', function($routeProvider) {
     when( '/list', {
       templateUrl: 'views/list.html',
       controller: 'WorkshopsController',
-      resolve: {
-        currentAuth: function(Authentication) {
-          return Authentication.requireAuth();
-        }
-      }
+      // resolve: {
+      //   currentAuth: function(Authentication) {
+      //     return Authentication.requireAuth();
+      //   }
+      // }
     }).
-  
+
     when( '/add', {
       templateUrl: 'views/add.html',
       controller: 'WorkshopsController'
+    }).
+
+    when( '/single', {
+      templateUrl: 'views/single.html',
+      controller: 'CheckinsController'
     }).
 
     otherwise({
