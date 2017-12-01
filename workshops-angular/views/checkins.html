@@ -1,3 +1,7 @@
+<header id="nlTopbar" class="site-header">
+    <nav class="cf" ng-include="'views/nav.html'"></nav>
+  </header>
+
 <section id="checkins" class="app-section checkins gradient">
   
   <hgroup class="page-title app-title container">
@@ -17,20 +21,26 @@
       </div>
 
       <fieldset>
-        <input type="firstname" name="firstname" placeholder="First Name"
-               ng-model="user.firstname" ng-required="true">
+        <label for="firstname" class="">
+          <input type="firstname" name="firstname" placeholder="First Name"
+               ng-model="user.firstname" ng-required="true"><span>First Name</span>
+        </label>
         <p class="error validationerror"
            ng-show="myform.firstname.$invalid && myform.firstname.$touched">
         First name required</p>
 
-        <input type="lastname" name="lastname" placeholder="Last Name"
-               ng-model="user.lastname" ng-required="true">
+        <label for="lastname" class="">
+          <input type="lastname" name="lastname" placeholder="Last Name"
+               ng-model="user.lastname" ng-required="true"><span>Last Name</span>
+        </label>
         <p class="error validationerror"
            ng-show="myform.lastname.$invalid && myform.lastname.$touched">
         Last name required</p>
 
-        <input type="email" name="email" placeholder="Email"
-               ng-model="user.email" ng-required="true">
+        <label for="email" class="">
+          <input type="email" name="email" placeholder="Email"
+               ng-model="user.email" ng-required="true"><span>Email</span>
+        </label>
         <p class="error validationerror"
            ng-show="myform.email.$invalid && myform.email.$touched">
         Must be a valid email</p>
@@ -41,5 +51,95 @@
       <small><a ng-href="#!/list">All Workshops</a></small>
 
     </form>
+  </div>
+</section>
+
+<section id="checkin-list" class="app-section checkin-list">
+  <div class="container small">
+    <div class="text-intro">
+      <h2 class="app-section-title">Check-ins</h2>
+      <p>Here's a list of all your latest check-ins.</p>
+      <p class="message" ng-show="message">{{ message }}</p>
+    </div>
+    
+    <div class="search-list">
+      <h3>Search Checkins</h3>
+      <input type="text" ng-model="query" placeholder="Search for users">
+      
+      <div class="formgroup">
+        <span class="label">by:</span>
+        <select ng-model="order">
+          <option value="firstname">First Name</option>
+          <option value="lastname">Last Name</option>
+          <option value="date">Date</option>
+        </select>
+      </div>
+      
+      <div class="formgroup">
+        <input type="radio" id="dirasc" name="direction" checked="checked"
+               ng-model="direction">
+        <label for="dirasc">asc</label>&nbsp;
+        
+        <input type="radio" id="dirdesc" name="direction" 
+               ng-model="direction" value="reverse">
+        <label for="dirdesc">desc</label>
+      </div>
+      
+      <div ng-show="currentUser" class="buttons">
+        <button class="button button-small button-pick"
+                ng-hide="recordId" ng-click="pickRandom()">Pick Random</button>
+        <button class="button button-small button-pick"
+                ng-show="recordId" ng-click="recordId=''">Reset</button>
+      </div>
+    </div>
+    
+    <ul class="userlist">
+      <li ng-class="checkin.userState" ng-repeat="checkin in checkins | orderBy: order:direction | filter: {$id: recordId, $: query}">
+        <div class="checkin">
+          
+          <div ng-show="currentUser" class="buttons">
+            <button class="button button-inverse button-small button-delete"
+                    ng-click="deleteCheckin(checkin.$id)">
+              <i class="fa fa-trash-o"></i><span></span>
+            </button>
+            <button class="button button-small button-prize"
+                    ng-click="showPrize(checkin)">
+              <i class="fa fa-trash-o"></i><span>Award Prize</span>
+            </button>
+          </div><!-- .buttons -->
+          
+          <div class="user-meta">
+            <h4>{{checkin.firstname}} {{checkin.lastname}}</h4>
+            <p>{{checkin.date | date: "MMM d,yy h:mm a"}}</p>
+          </div><!-- .user-meta -->
+          
+          <div class="show-checkins" ng-show="checkin.show">
+            <form name="myform" class="award"
+                  ng-submit="awardPrize(checkin, checkin.prizeText)"
+                  novalidate>
+              <input type="text" name="prizeText" placeholder="What are you giving?"
+                     ng-required="true" ng-model="checkin.prizeText">
+              <button class="button" type="submit"
+                      ng-disabled="myform.$invalid">+</button>
+            </form>
+            
+            <ul class="prizeslist">
+              <li class="attendee" ng-repeat="(key, prize) in checkin.prizes">
+                <div class="prize">
+                  <div class="buttons">
+                    <button class="button button-small button-delete tooltip"
+                            ng-click="deletePrize(checkin, key)">
+                      <span>Delete this prize</span>
+                    </button>
+                  </div><!-- .buttons -->
+                  {{ prize.name }}
+                </div>
+              </li>
+            </ul>
+          </div><!-- .show-checkins -->
+          
+        </div><!-- .checkin -->
+      </li>
+    </ul><!-- .userlist -->
   </div>
 </section>

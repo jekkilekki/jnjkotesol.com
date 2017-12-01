@@ -94,12 +94,12 @@ myApp.config( ['$routeProvider', function($routeProvider) {
       controller: 'RegistrationController'
     }).
 
-    when( '/checkins/:uid/:mid', {
+    when( '/checkin/:uid/:mid', {
       templateUrl: 'views/checkins.html',
       controller: 'CheckinsController'
     }).
 
-    when( '/checkins/:uid/:mid/checkins-list', {
+    when( '/checkin/:uid/:mid/list', {
       templateUrl: 'views/checkins-list.html',
       controller: 'CheckinsController'
     }).
