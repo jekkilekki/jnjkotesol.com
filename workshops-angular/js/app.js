@@ -119,9 +119,9 @@ myApp.config( ['$routeProvider', function($routeProvider) {
       controller: 'WorkshopsController'
     }).
 
-    when( '/single', {
+    when( '/single/:uid/:mid', {
       templateUrl: 'views/single.html',
-      controller: 'CheckinsController'
+      controller: 'WorkshopsController'
     }).
 
     otherwise({

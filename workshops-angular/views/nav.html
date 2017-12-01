@@ -38,8 +38,19 @@
     <div class="title ng-binding">
       KOTESOL Workshops <span ng-show="howManyWorkshops" class="badge number">{{howManyWorkshops}}</span>
     </div>
+  <a class="button ticket-button" ng-hide="currentUser" ng-href="#!/login">Login</a>
+
+        <div class="userinfo" ng-show="currentUser" ng-controller="RegistrationController">
+          <p class="userinfo">Hi {{currentUser.firstname}}!
+            <a class="button ticket-button" ng-href="#!/login" ng-click="logout()">Logout</a>
+          </p>
+        </div>
   </div>
-<div id="nlBurger" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transition: none; transform: translate(0px, 0px) translateZ(0px) rotate(0deg); z-index: 1106;"><div id="burger-top" style="transition: none; transform-origin: 100% 100% 0px; transform: translate(0px, 0px) translateZ(0px) rotate(0deg) scale3d(1, 1, 1);"></div><div id="burger-center"></div><div id="burger-bottom" style="transition: none; transform-origin: 100% 0% 0px; transform: translate(0px, 0px) translateZ(0px) rotate(0deg) scale3d(1, 1, 1);"></div></div>
+  <div id="nlBurger" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transition: none; transform: translate(0px, 0px) translateZ(0px) rotate(0deg); z-index: 1106;">
+    <div id="burger-top" style="transition: none; transform-origin: 100% 100% 0px; transform: translate(0px, 0px) translateZ(0px) rotate(0deg) scale3d(1, 1, 1);"></div>
+    <div id="burger-center"></div>
+    <div id="burger-bottom" style="transition: none; transform-origin: 100% 0% 0px; transform: translate(0px, 0px) translateZ(0px) rotate(0deg) scale3d(1, 1, 1);"></div>
+  </div>
 
 <!-- App Menu -->
 <!--<header class="app-screen-header">-->

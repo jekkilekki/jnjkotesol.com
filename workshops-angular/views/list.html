@@ -42,11 +42,11 @@
 
         <h4 class="app-section-title">All Workshops</h4>
         <ul class="workshops-list">
-          <li class="workshop"  ng-repeat="(key, workshop) in workshops">
-            <a ng-href="#!/checkins/{{currentUser.regUser}}/{{workshop.$id}}">
+          <li class="workshop" ng-repeat="(key, workshop) in workshops">
+            <a ng-href="#!/single/{{ currentUser.regUser }}/{{ workshop.$id }}">
               <span class="workshop-attendee number">#</span>
               <div class="workshop-meta">
-                <h2 class="workshop-name">{{ workshop.name }}</h2>
+                <h2 class="workshop-name">{{ workshop.workshopname || workshop.name }}</h2>
                 <p class="workshop-date">{{ workshop.workshopdate || workshop.date }} {{ workshop.workshoptime }}</p>
               </div>
             </a>

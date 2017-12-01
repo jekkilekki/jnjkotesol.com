@@ -1,18 +1,32 @@
 myApp.controller( 'WorkshopsController',
-                 ['$scope', '$rootScope', '$location', '$firebaseAuth', '$firebaseArray',
-                 function($scope, $rootScope, $location, $firebaseAuth, $firebaseArray) {
+                 ['$scope', '$rootScope', '$location', '$routeParams', '$firebaseAuth', '$firebaseArray',
+                 function($scope, $rootScope, $location, $routeParams, $firebaseAuth, $firebaseArray) {
   $scope.message = "Welcome to the JNJ KOTESOL Workshops App.";
 
   var ref = firebase.database().ref();
   var auth = $firebaseAuth();
+                   
+  $scope.whichWorkshop = $routeParams.mid;
+  $scope.whichUser = $routeParams.uid;
+                   
+  // Single Workshop page
+  // Testing: http://127.0.0.1:62757/jnjkotesol.com/workshops-angular/#!/single/V9TzErg8ZySsEOxkTkcxfvjFIOD2/L-G2-awvg37zfBRa1KV
+  var pagePath = $location.path();
+  if( pagePath == '/single/' + $routeParams.uid + '/' + $routeParams.mid ) {
+    firebase.database().ref()
+      .child('users').child($scope.whichUser)
+      .child('workshops').child($scope.whichWorkshop).once('value').then( function(snapshot) {
+
+         $scope.thisworkshop = snapshot.val();
+
+    }); // end single
+  }
 
   auth.$onAuthStateChanged( function( authUser ) {
     if( authUser ) {
       var workshopsRef = ref.child('users').child(authUser.uid).child('workshops');
       var workshopsInfo = $firebaseArray(workshopsRef);
-//      var wkRef = ref.child('workshops');
-//      var wkInfo = $firebaseArray(wkRef);
-
+      
       $scope.workshops = workshopsInfo;
 
       workshopsInfo.$loaded().then(function(data) {
@@ -23,59 +37,64 @@ myApp.controller( 'WorkshopsController',
         $rootScope.howManyWorkshops = workshopsInfo.length;
       }); // update workshops number when a new meeting is loaded
 
-      $scope.addWorkshop = function() {
-//        updateWorkshop( $scope );
-        
+      $scope.addWorkshop = function() {  
         // Workshop data
 //        var workshopData = {
-//          name: $scope.workshopname,
 //          date: firebase.database.ServerValue.TIMESTAMP,
-//          workshopdate: $scope.workshopdate,
-//          speakername: $scope.speakername,
-//          speakertitle: $scope.speakertitle,
-//          speakerabstract: $scope.speakerabstract,
-//          speakerbio: $scope.speakerbio
+//          workshopname: $scope.workshopname,
+//          workshopimage: $scope.workshopimage || null,
+//          workshopdate: $scope.workshopdate.toString() || null,
+//          workshoptime: $scope.workshoptime.getTime() || null,
+//          workshopdescription: $scope.workshopinfo || null,
+//          
+//          speaker1name: $scope.speaker1name || null,
+//          speaker1affiliation: $scope.speaker1affiliation || null,
+//          speaker1image: $scope.speaker1image || null,
+//          speaker1title: $scope.speaker1title || null,
+//          speaker1abstract: $scope.speaker1abstract || null,
+//          speaker1bio: $scope.speaker1bio || null,
+//          speaker1email: $scope.speaker1email || null,
+//          speaker1link: $scope.speaker1link || null,
+//          
+//          speaker2name: $scope.speaker2name || null,
+//          speaker2affiliation: $scope.speaker2affiliation || null,
+//          speaker2image: $scope.speaker2image || null,
+//          speaker2title: $scope.speaker2title || null,
+//          speaker2abstract: $scope.speaker2abstract || null,
+//          speaker2bio: $scope.speaker2bio || null,
+//          speaker2email: $scope.speaker2email || null,
+//          speaker2link: $scope.speaker2link || null
 //        };
-//
-//        // Key for a new Workshop
-//        var newWorkshopKey = ref.child('workshops').push().key;
-//
-//        // Write the new Workshop's data simultaneously in the workshops list and the user's workshops list.
-//        var updates = {};
-//        updates['/workshops/' + newWorkshopKey] = workshopData;
-////        updates['/users/' + authUser.uid + '/workshops/' + newWorkshopKey] = workshopData;
-//        
-//        return ref.update(updates);
         
-        
-//        .then( function() {
-//          $scope.workshopname = '';
-//          $scope.workshopdate = '';
-//          $scope.speakername = '';
-//          $scope.speakertitle = '';
-//          $scope.speakerabstract = '';
-//          $scope.speakerbio = '';
-//        }); // promise
-        
+        // Add Workshop data
         workshopsInfo.$add({
           date: firebase.database.ServerValue.TIMESTAMP,
-          name: $scope.workshopname,
-          image: $scope.workshopimage || null,
+          workshopname: $scope.workshopname,
+          workshopimage: $scope.workshopimage || null,
           workshopdate: $scope.workshopdate.toString() || null,
           workshoptime: $scope.workshoptime.getTime() || null,
-          description: $scope.workshopinfo || null,
-          speakername: $scope.speakername || null,
-          speakerimage: $scope.speakerimage || null,
-          speakertitle: $scope.speakertitle || null,
-          speakerabstract: $scope.speakerabstract || null,
-          speakerbio: $scope.speakerbio || null,
-          speakeremail: $scope.speakeremail || null,
-          speakerlink: $scope.speakerlink || null
+          workshopdescription: $scope.workshopinfo || null,
+          
+          speaker1name: $scope.speaker1name || null,
+          speaker1affiliation: $scope.speaker1affiliation || null,
+          speaker1image: $scope.speaker1image || null,
+          speaker1title: $scope.speaker1title || null,
+          speaker1abstract: $scope.speaker1abstract || null,
+          speaker1bio: $scope.speaker1bio || null,
+          speaker1email: $scope.speaker1email || null,
+          speaker1link: $scope.speaker1link || null,
+          
+          speaker2name: $scope.speaker2name || null,
+          speaker2affiliation: $scope.speaker2affiliation || null,
+          speaker2image: $scope.speaker2image || null,
+          speaker2title: $scope.speaker2title || null,
+          speaker2abstract: $scope.speaker2abstract || null,
+          speaker2bio: $scope.speaker2bio || null,
+          speaker2email: $scope.speaker2email || null,
+          speaker2link: $scope.speaker2link || null
         }).then( function() { 
           $location.path( '/list' );
         }); // promise
-        
-        
       } // addWorkshop
 
       $scope.deleteWorkshop = function( key ) {

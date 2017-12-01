@@ -49,44 +49,94 @@
             </label>
           </fieldset>
 
-          <fieldset class="speaker-info">
-            <h4>Speaker Info</h4>
-            <label for="speakername" class="">
-              <input type="text" id="speakername" placeholder="Speaker Name"
-                     ng-model="speakername"><span>Speaker Name</span>
+          <fieldset class="speaker-info-one speaker-info">
+            <h4>First Speaker Info</h4>
+            <label for="speaker1name" class="">
+              <input type="text" id="speaker1name" placeholder="Speaker Name"
+                     ng-model="speaker1name"><span>Speaker Name</span>
             </label>
             
-            <label for="speakerimage" class="">
-              <input type="text" id="speakerimage" placeholder="img/filename.png"
-                     ng-model="speakerimage"><span>Speaker Image</span>
-            </label>
-
-            <label for="speakertitle" class="">
-              <input type="text" id="speakertitle" placeholder="Speaker Title"
-                     ng-model="speakertitle"><span>Speaker Title</span>
-            </label>
-
-            <label for="speakerabstract" class="">
-              <textarea id="speakerabstract" placeholder="Speaker Abstract"
-                        ng-model="speakerabstract"></textarea><span>Speaker Abstract</span>
-            </label>
-
-            <label for="speakerbio" class="">
-              <textarea id="speakerbio" placeholder="Speaker Bio"
-                        ng-model="speakerbio"></textarea><span>Workshop Date / Time</span>
+            <label for="speaker1affiliation" class="">
+              <input type="text" id="speaker1affiliation" placeholder="Speaker Affiliation"
+                     ng-model="speaker1affiliation"><span>Speaker Affiliation (School)</span>
             </label>
             
-            <label for="speakeremail" class="">
-              <input type="email" id="speakeremail" placeholder="Contact Email"
-                     ng-model="speakeremail"><span>Contact Email</span>
-            </label>
-            
-            <label for="speakerlink" class="">
-              <input type="url" id="speakerlink" placeholder="Speaker Link"
-                     ng-model="speakerlink"><span>Speaker Link</span>
+            <label for="speaker1image" class="">
+              <input type="text" id="speaker1image" placeholder="img/filename.png"
+                     ng-model="speaker1image"><span>Speaker Image</span>
             </label>
 
-            <a class="add-speaker"><i class="fa fa-plus-circle"></i> Add Speaker</a>
+            <label for="speaker1title" class="">
+              <input type="text" id="speaker1title" placeholder="Speaker Title"
+                     ng-model="speaker1title"><span>Speaker Title</span>
+            </label>
+
+            <label for="speaker1abstract" class="">
+              <textarea id="speaker1abstract" placeholder="Speaker Abstract"
+                        ng-model="speaker1abstract"></textarea><span>Speaker Abstract</span>
+            </label>
+
+            <label for="speaker1bio" class="">
+              <textarea id="speaker1bio" placeholder="Speaker Bio"
+                        ng-model="speaker1bio"></textarea><span>Workshop Date / Time</span>
+            </label>
+            
+            <label for="speaker1email" class="">
+              <input type="email" id="speaker1email" placeholder="Contact Email"
+                     ng-model="speaker1email"><span>Contact Email</span>
+            </label>
+            
+            <label for="speaker1link" class="">
+              <input type="url" id="speaker1link" placeholder="Speaker Link"
+                     ng-model="speaker1link"><span>Speaker Link</span>
+            </label>
+
+<!--            <a class="add-speaker"><i class="fa fa-plus-circle"></i> Add Speaker</a>-->
+          </fieldset>
+          
+          <fieldset class="speaker-info-two speaker-info">
+            <h4>Second Speaker Info</h4>
+            <label for="speaker2name" class="">
+              <input type="text" id="speaker2name" placeholder="Speaker Name"
+                     ng-model="speaker2name"><span>Speaker Name</span>
+            </label>
+            
+            <label for="speaker2affiliation" class="">
+              <input type="text" id="speaker2affiliation" placeholder="Speaker Affiliation"
+                     ng-model="speaker2affiliation"><span>Speaker Affiliation (School)</span>
+            </label>
+            
+            <label for="speaker2image" class="">
+              <input type="text" id="speaker2image" placeholder="img/filename.png"
+                     ng-model="speaker2image"><span>Speaker Image</span>
+            </label>
+
+            <label for="speaker2title" class="">
+              <input type="text" id="speaker2title" placeholder="Speaker Title"
+                     ng-model="speaker2title"><span>Speaker Title</span>
+            </label>
+
+            <label for="speaker2abstract" class="">
+              <textarea id="speaker2abstract" placeholder="Speaker Abstract"
+                        ng-model="speaker2abstract"></textarea><span>Speaker Abstract</span>
+            </label>
+
+            <label for="speaker2bio" class="">
+              <textarea id="speaker2bio" placeholder="Speaker Bio"
+                        ng-model="speaker2bio"></textarea><span>Workshop Date / Time</span>
+            </label>
+            
+            <label for="speaker2email" class="">
+              <input type="email" id="speaker2email" placeholder="Contact Email"
+                     ng-model="speaker2email"><span>Contact Email</span>
+            </label>
+            
+            <label for="speaker2link" class="">
+              <input type="url" id="speaker2link" placeholder="Speaker Link"
+                     ng-model="speaker2link"><span>Speaker Link</span>
+            </label>
+
+<!--            <a class="add-speaker"><i class="fa fa-plus-circle"></i> Add Speaker</a>-->
           </fieldset>
           <button type="submit" class="app-screen-button button big-button"
                   ng-disabled="myform.$invalid">

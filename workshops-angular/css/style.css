@@ -2031,6 +2031,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   }
 }
 
+/*
 @media screen and (min-width: 46rem) {
   #speaker-single .speaker-info-section,
   #team .speaker-info-section {
@@ -2060,6 +2061,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
     padding-left: 380px;
   }
 }
+*/
 
 #speaker-single .grid-item.photo,
 #team .grid-item.photo {
@@ -2084,11 +2086,17 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   }
 }
 
+/*
 @media screen and (min-width: 46rem) {
   #speaker-single .grid-item.photo,
   #team .grid-item.photo {
     margin-left: 5.5%;
   }
+}
+*/
+
+.speaker-two {
+  padding: 4rem 0;
 }
 
 #speaker-single .speaker-meta {
