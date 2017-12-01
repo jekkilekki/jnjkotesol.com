@@ -1,32 +1,97 @@
+<header id="nlTopbar" class="site-header">
+    <nav class="cf" ng-include="'views/nav.html'"></nav>
+  </header>
+
 <!-- Workshop Overlay -->
   <aside class="app-overlay">
     <div class="app-overlay-container">
       <header class="app-overlay-header">
     <a href="#!/list" class="tooltip close-button"><i class="close-button fa fa-times"></i><span class="screen-reader-text">Close</span></a>
-    <h1 class="app-overlay-title">Add Workshop</h1>
+    <h3 class="app-overlay-title">Add Workshop</h3>
   </header>
 
       <article class="app-overlay-body">
-        <form id="add-workshop">
-          <fieldset class="workshop-meta">
+        <form id="add-workshop" class="add-form" name="myform"
+              ng-submit="addWorkshop()"
+              novalidate>
+          <fieldset class="workshop-info">
             <h4>Workshop Info</h4>
-            <label for="workshop-name" class="workshop-name"><input type="text" id="workshop-name" placeholder="Workshop Name"><span>Workshop Name</span></label>
-            <label for="workshop-date" class="workshop-date"><input type="date" id="workshop-date" placeholder="Workshop Date / Time"><span>Workshop Date / Time</span></label>
+            <label for="workshopname" class="">
+              <input type="text" id="workshopname" name="workshopname" placeholder="Workshop Name"
+                     ng-model="workshopname" ng-required="true"><span>Workshop Name</span>
+            </label>
+            <p class="error validationerror" 
+               ng-show="myform.workshopname.$invalid && myform.workshopname.$touched">
+               Workshop name is required</p>
+            
+            <label for="workshopimage" class="">
+<!--
+              <input type="file" id="workshopimage" name="workshopimage"
+                     ng-model="workshopimage"><span>Workshop Image</span>
+-->
+              <input type="text" id="workshopimage" name="workshopimage" placeholder="img/filename.png"
+                     ng-model="workshopimage"><span>Workshop Image</span>
+            </label>
+            
+            <label for="workshopdate" class="">
+              <input type="date" id="workshopdate" name="workshopdate" placeholder="Workshop Date"
+                     ng-model="workshopdate"><span>Workshop Date</span>
+            </label>
+            
+            <label for="workshoptime" class="">
+              <input type="time" id="workshoptime" name="workshoptime" placeholder="Workshop Time" value="14:45"
+                     ng-model="workshoptime"><span>Workshop Time</span>
+            </label>
+            
+            <label for="workshopinfo" class="">
+              <textarea id="workshopinfo" name="workshopinfo" placeholder="Workshop Description"
+                        ng-model="workshopinfo"></textarea><span>Workshop Info (Optional)</span>
+            </label>
           </fieldset>
 
-          <fieldset class="speaker-meta">
+          <fieldset class="speaker-info">
             <h4>Speaker Info</h4>
-            <label for="speaker-name" class="speaker-name"><input type="text" id="speaker-name" placeholder="Speaker Name"><span>Speaker Name</span></label>
+            <label for="speakername" class="">
+              <input type="text" id="speakername" placeholder="Speaker Name"
+                     ng-model="speakername"><span>Speaker Name</span>
+            </label>
+            
+            <label for="speakerimage" class="">
+              <input type="text" id="speakerimage" placeholder="img/filename.png"
+                     ng-model="speakerimage"><span>Speaker Image</span>
+            </label>
 
-            <label for="speaker-title" class="speaker-title"><input type="text" id="speaker-title" placeholder="Speaker Title"><span>Speaker Title</span></label>
+            <label for="speakertitle" class="">
+              <input type="text" id="speakertitle" placeholder="Speaker Title"
+                     ng-model="speakertitle"><span>Speaker Title</span>
+            </label>
 
-            <label for="speaker-abstract" class="speaker-abstract"><textarea id="speaker-abstract" placeholder="Speaker Abstract"></textarea><span>Speaker Abstract</span></label>
+            <label for="speakerabstract" class="">
+              <textarea id="speakerabstract" placeholder="Speaker Abstract"
+                        ng-model="speakerabstract"></textarea><span>Speaker Abstract</span>
+            </label>
 
-            <label for="speaker-bio" class="speaker-bio"><textarea id="speaker-bio" placeholder="Speaker Bio"></textarea><span>Workshop Date / Time</span></label>
+            <label for="speakerbio" class="">
+              <textarea id="speakerbio" placeholder="Speaker Bio"
+                        ng-model="speakerbio"></textarea><span>Workshop Date / Time</span>
+            </label>
+            
+            <label for="speakeremail" class="">
+              <input type="email" id="speakeremail" placeholder="Contact Email"
+                     ng-model="speakeremail"><span>Contact Email</span>
+            </label>
+            
+            <label for="speakerlink" class="">
+              <input type="url" id="speakerlink" placeholder="Speaker Link"
+                     ng-model="speakerlink"><span>Speaker Link</span>
+            </label>
 
             <a class="add-speaker"><i class="fa fa-plus-circle"></i> Add Speaker</a>
           </fieldset>
-          <i class="fa fa-plus-circle"></i><input type="submit" class="app-screen-button" value="Add Workshop">
+          <button type="submit" class="app-screen-button button big-button"
+                  ng-disabled="myform.$invalid">
+            <i class="fa fa-plus-circle"></i> Add Workshop
+          </button>
         </form>
       </article>
     </div>

@@ -22,7 +22,7 @@ myApp.factory( 'Authentication',
         user.email,
         user.password
       ).then(function(user) {
-        $location.path('/workshops');
+        $location.path('/add');
       }).catch(function(error) {
         $rootScope.message = error.message;
       }); // signInWithEmailAndPassword

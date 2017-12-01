@@ -1,4 +1,5 @@
-<!-- <section class="app-section workshops">
+<!-- <section class="app-section workshops">-->
+<!--
   <div class="container small">
     <div class="text-intro">
       <h2 class="app-section-title">Workshops</h2>
@@ -25,26 +26,28 @@
 
       <button type="submit" class="button big-button"
               ng-disabled="myform.$invalid">+</button>
-    </form> -->
+    </form> 
+-->
 
 <header id="nlTopbar" class="site-header">
     <nav class="cf" ng-include="'views/nav.html'"></nav>
   </header>
 
     <!-- Workshops List -->
-    <section id="workshops-list" class="app-screen active">
+    <section id="workshops-list" class="app-screen">
       <main class="app-screen-body">
         <figure class="app-screen-main-img">
-          <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/23795400_1861551364157535_7739358288284061935_n.jpg?oh=4466376a9eb91c8ed863e667d91f3a92&oe=5A97D703">
+          <img src="img/workshops-main.png">
         </figure>
 
+        <h4 class="app-section-title">All Workshops</h4>
         <ul class="workshops-list">
           <li class="workshop"  ng-repeat="(key, workshop) in workshops">
             <a ng-href="#!/checkins/{{currentUser.regUser}}/{{workshop.$id}}">
               <span class="workshop-attendee number">#</span>
               <div class="workshop-meta">
                 <h2 class="workshop-name">{{ workshop.name }}</h2>
-                <p class="workshop-date">{{ workshop.date }}</p>
+                <p class="workshop-date">{{ workshop.workshopdate || workshop.date }} {{ workshop.workshoptime }}</p>
               </div>
             </a>
             <a class="delete-button" ng-click="deleteWorkshop(key)">
