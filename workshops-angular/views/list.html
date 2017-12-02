@@ -50,12 +50,10 @@
                 <p class="workshop-date">{{ workshop.workshopdate || workshop.date }} {{ workshop.workshoptime }}</p>
               </div>
             </a>
-            <!--
-            <a class="delete-button" ng-click="deleteWorkshop(key)">
+            <a class="delete-button" ng-show="currentUser" ng-click="deleteWorkshop(key)">
               <i class="fa fa-trash"></i>
               <p>Delete</p>
             </a>
-            -->
           </li>
         </ul><!-- .workshop-list -->
       </main>

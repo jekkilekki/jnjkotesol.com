@@ -72,7 +72,7 @@
             <p class="attendee-date">{{checkin.date | date: "MMM d, yy h:mm a"}}</p>
           </div><!-- .user-meta -->
           
-          <a class="delete-button"
+          <a class="delete-button" ng-show="currentUser"
                     ng-click="deleteCheckin(checkin.$id)">
             <i class="fa fa-trash"></i>
               <p>Delete</p>
