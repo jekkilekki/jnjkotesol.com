@@ -1,6 +1,6 @@
 <header id="nlTopbar" class="site-header">
-    <nav class="cf" ng-include="'views/nav.html'"></nav>
-  </header>
+  <nav class="cf" ng-include="'views/nav.html'"></nav>
+</header>
 
 <!-- Workshops Single -->
 <section id="speaker-single" class="app-screen">
@@ -10,7 +10,7 @@
   </header> -->
   
   <main class="app-screen-body">
-    <figure class="hero image" style="background-image: url('img/workshops/{{ thisworkshop.workshopimage }}');">
+    <figure class="hero image" style="background-image: url('{{ thisworkshop.workshopimage }}');">
       <div class="svg-container header-svg svg-block">
         <!-- SVG Container from Oblique WordPress Theme: https://demo.themeisle.com/oblique/ -->
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">
@@ -99,9 +99,11 @@
     </section>
   </main>
   
-  <footer class="app-screen-footer">
-        <a id="checkin-button" class="app-screen-button" href="#!/checkin/{{ currentUser.regUser }}/{{ thisworkshop.workshopid }}">
-          <i class="fa fa-check"></i> Check-in
-        </a>
-      </footer>
+  <footer class="app-screen-footer" ng-include="'views/nav-footer.html'">
+  </footer>
+  
+  <a id="checkin-button" class="app-screen-button" ng-href="#!/checkin/V9TzErg8ZySsEOxkTkcxfvjFIOD2/{{ thisworkshop.workshopid }}"
+     ng-click="reloadRoute()">
+    <i class="fa fa-check"></i> Check-in
+  </a>
 </section>

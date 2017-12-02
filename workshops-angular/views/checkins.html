@@ -1,117 +1,130 @@
 <header id="nlTopbar" class="site-header">
-    <nav class="cf" ng-include="'views/nav.html'"></nav>
-  </header>
+  <nav class="cf" ng-include="'views/nav.html'"></nav>
+</header>
 
-<section id="checkins" class="app-section checkins gradient">
-  
-  <hgroup class="page-title app-title container">
-    <img src="https://conference.jnjkotesol.com/img/jnj-kotesol-logo-2.png">
-    <h1><span class="screen-reader-text">Jeonju-North Jeolla KOTESOL</span> Workshop App</h1>
-  </hgroup>
-  
-  <div class="container small">
-    <form name="myform"
-          ng-submit="addCheckin()"
-          novalidate>
+<section id="checkin-screen" class="app-screen">
+<main class="app-screen-body">
 
-      <div class="text-intro">
-        <h2 class="app-section-title">Check-in</h2>
-        <p>To this meeting</p>
-        <p class="message" ng-show="message">{{ message }}</p>
+  <!-- Checkins -->
+  <section id="checkins" class="app-screen">
+  <!--   <header class="app-screen-header">
+    <a href="#" class="tooltip"><i class="fa fa-bars"></i><span class="screen-reader-text">Menu</span></a>
+    <h1 class="app-screen-title">December Workshop <span class="number">17</span></h1>
+  </header> -->
+  
+    <hgroup class="app-section-title-group">
+      <h2 class="app-section-title">{{ thisworkshop.workshopname }}</h2>
+      <p class="app-section-description">{{ thisworkshop.workshopdescription }}</p>
+    </hgroup>
+    
+    <figure class="hero image" style="background-image: url('{{ thisworkshop.workshopimage }}');">
+      <div class="svg-container header-svg svg-block">
+        <!-- SVG Container from Oblique WordPress Theme: https://demo.themeisle.com/oblique/ -->
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">
+				<g transform="translate(0, -902.36218)"></g>
+				<path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+				<path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+				<path d="m 1925,0 0,150 -1925,0"></path>
+			  </svg>
       </div>
+    </figure>
+  
+    <div class="container small gradient">
+      <form name="myform"
+            ng-submit="addCheckin()"
+            novalidate>
 
-      <fieldset>
-        <label for="firstname" class="">
-          <input type="firstname" name="firstname" placeholder="First Name"
-               ng-model="user.firstname" ng-required="true"><span>First Name</span>
-        </label>
-        <p class="error validationerror"
-           ng-show="myform.firstname.$invalid && myform.firstname.$touched">
-        First name required</p>
+        <fieldset>
+          <h4>Check-in</h4>
+          <label for="firstname" class="">
+            <input type="firstname" name="firstname" placeholder="First Name"
+                 ng-model="user.firstname" ng-required="true"><span>First Name</span>
+          </label>
+          <p class="error validationerror"
+             ng-show="myform.firstname.$invalid && myform.firstname.$touched">
+          First name required</p>
 
-        <label for="lastname" class="">
-          <input type="lastname" name="lastname" placeholder="Last Name"
-               ng-model="user.lastname" ng-required="true"><span>Last Name</span>
-        </label>
-        <p class="error validationerror"
-           ng-show="myform.lastname.$invalid && myform.lastname.$touched">
-        Last name required</p>
+          <label for="lastname" class="">
+            <input type="lastname" name="lastname" placeholder="Last Name"
+                 ng-model="user.lastname" ng-required="true"><span>Last Name</span>
+          </label>
+          <p class="error validationerror"
+             ng-show="myform.lastname.$invalid && myform.lastname.$touched">
+          Last name required</p>
 
-        <label for="email" class="">
-          <input type="email" name="email" placeholder="Email"
-               ng-model="user.email" ng-required="true"><span>Email</span>
-        </label>
-        <p class="error validationerror"
-           ng-show="myform.email.$invalid && myform.email.$touched">
-        Must be a valid email</p>
-      </fieldset>
+          <label for="email" class="">
+            <input type="email" name="email" placeholder="Email"
+                 ng-model="user.email" ng-required="true"><span>Email</span>
+          </label>
+          <p class="error validationerror"
+             ng-show="myform.email.$invalid && myform.email.$touched">
+          Must be a valid email</p>
+        </fieldset>
 
-      <button type="submit" class="button big-button"
-              ng-disabled="myform.$invalid">Check-in</button>
-      <small><a ng-href="#!/list">All Workshops</a></small>
+        <button type="submit" class="button big-button"
+                ng-disabled="myform.$invalid">Check-in</button>
+        <small><a ng-href="#!/list">All Workshops</a></small>
 
-    </form>
-  </div>
-</section>
+      </form>
+    </div>
+  </section>
 
-<section id="checkin-list" class="app-section checkin-list">
-  <div class="container small">
-    <div class="text-intro">
-      <h2 class="app-section-title">Check-ins</h2>
-      <p>Here's a list of all your latest check-ins.</p>
-      <p class="message" ng-show="message">{{ message }}</p>
+  <!--
+  <section id="checkin-list" class="app-section checkin-list">
+    <h4 class="app-section-title">All Check-ins</h4>
+    <div class="container small">
+
+      <div class="search-list add-form">
+        <h5>Search Checkins</h5>
+        <input type="text" ng-model="query" placeholder="Search for users">
+
+        <div class="formgroup">
+          <span class="label">by:</span>
+          <select ng-model="order">
+            <option value="firstname">First Name</option>
+            <option value="lastname">Last Name</option>
+            <option value="date">Date</option>
+          </select>
+        </div>
+
+        <div class="formgroup">
+          <input type="radio" id="dirasc" name="direction" checked="checked"
+                 ng-model="direction">
+          <label for="dirasc">asc</label>&nbsp;
+
+          <input type="radio" id="dirdesc" name="direction" 
+                 ng-model="direction" value="reverse">
+          <label for="dirdesc">desc</label>
+        </div>
+
+        <div ng-show="currentUser" class="buttons">
+          <button class="button button-pick"
+                  ng-hide="recordId" ng-click="pickRandom()">Pick Random</button>
+          <button class="button button-pick"
+                  ng-show="recordId" ng-click="recordId=''">Reset</button>
+        </div>
+      </div>
     </div>
     
-    <div class="search-list">
-      <h3>Search Checkins</h3>
-      <input type="text" ng-model="query" placeholder="Search for users">
-      
-      <div class="formgroup">
-        <span class="label">by:</span>
-        <select ng-model="order">
-          <option value="firstname">First Name</option>
-          <option value="lastname">Last Name</option>
-          <option value="date">Date</option>
-        </select>
-      </div>
-      
-      <div class="formgroup">
-        <input type="radio" id="dirasc" name="direction" checked="checked"
-               ng-model="direction">
-        <label for="dirasc">asc</label>&nbsp;
-        
-        <input type="radio" id="dirdesc" name="direction" 
-               ng-model="direction" value="reverse">
-        <label for="dirdesc">desc</label>
-      </div>
-      
-      <div ng-show="currentUser" class="buttons">
-        <button class="button button-small button-pick"
-                ng-hide="recordId" ng-click="pickRandom()">Pick Random</button>
-        <button class="button button-small button-pick"
-                ng-show="recordId" ng-click="recordId=''">Reset</button>
-      </div>
-    </div>
-    
-    <ul class="userlist">
-      <li ng-class="checkin.userState" ng-repeat="checkin in checkins | orderBy: order:direction | filter: {$id: recordId, $: query}">
+    <ul class="attendees-list">
+      <li class="attendee" ng-class="checkin.userState" ng-repeat="checkin in checkins | orderBy: order:direction | filter: {$id: recordId, $: query}">
         <div class="checkin">
           
-          <div ng-show="currentUser" class="buttons">
-            <button class="button button-inverse button-small button-delete"
-                    ng-click="deleteCheckin(checkin.$id)">
-              <i class="fa fa-trash-o"></i><span></span>
-            </button>
-            <button class="button button-small button-prize"
-                    ng-click="showPrize(checkin)">
-              <i class="fa fa-trash-o"></i><span>Award Prize</span>
-            </button>
-          </div><!-- .buttons -->
+            <a class="workshop-prize tooltip"
+                    ng-show="currentUser" ng-click="showPrize(checkin)">
+              <i class="fa fa-trophy"></i><span class="screen-reader-text">Award Prize</span>
+            </a>
           
-          <div class="user-meta">
-            <h4>{{checkin.firstname}} {{checkin.lastname}}</h4>
-            <p>{{checkin.date | date: "MMM d,yy h:mm a"}}</p>
-          </div><!-- .user-meta -->
+          <div class="attendee-meta">
+            <h4 class="attendee-name">{{checkin.firstname}} {{checkin.lastname}}</h4>
+            <p class="attendee-date">{{checkin.date | date: "MMM d, yy h:mm a"}}</p>
+          </div><!-- .user-meta 
+          
+          <a class="delete-button"
+                    ng-click="deleteCheckin(checkin.$id)">
+            <i class="fa fa-trash"></i>
+              <p>Delete</p>
+          </a>
           
           <div class="show-checkins" ng-show="checkin.show">
             <form name="myform" class="award"
@@ -131,15 +144,20 @@
                             ng-click="deletePrize(checkin, key)">
                       <span>Delete this prize</span>
                     </button>
-                  </div><!-- .buttons -->
+                  </div><!-- .buttons 
                   {{ prize.name }}
                 </div>
               </li>
             </ul>
-          </div><!-- .show-checkins -->
+          </div><!-- .show-checkins 
           
-        </div><!-- .checkin -->
+        </div><!-- .checkin 
       </li>
-    </ul><!-- .userlist -->
-  </div>
+    </ul><!-- .userlist 
+  </section> 
+-->
+  </main>
+  
+  <footer class="app-screen-footer" ng-include="'views/nav-footer.html'">
+  </footer>
 </section>

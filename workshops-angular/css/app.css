@@ -22,8 +22,8 @@ body {
 }
 
 .app-section {
-  height: 100vh;
-  padding-top: 8rem;
+/*  height: 100vh;*/
+  padding-top: 56px;
 }
 
 form p {
@@ -44,6 +44,13 @@ form small {
 
 .userinfo {
   margin-bottom: 0;
+  float: right;
+  margin: 0.5rem 1.5rem;
+}
+
+.userinfo .ticket-button {
+  padding: 5px 15px!important;
+  margin-left: 0.25rem;
 }
 
 fieldset {
@@ -124,6 +131,60 @@ button.big-button {
 }
 
 .checkinslist h3 { color: #657B83; }
+
+#checkin-list {
+  background: white;
+  padding-top: 0;
+}
+
+#checkin-list .header-svg {
+  fill: white;
+}
+
+#checkin-list .container {
+  border-bottom: 1px solid #B0BEC5;
+  padding-bottom: 1rem;
+}
+
+#checkin-list h4.app-section-title {
+  margin-top: -2rem;
+}
+
+#checkin-list .formgroup {
+  width: auto;
+  float: left;
+  padding-right: 1rem;
+  margin-top: 0.5rem;
+}
+
+#checkin-list input[type="radio"] {
+  width: auto;
+  margin-top: 4px;
+}
+
+#checkin-list .button-pick {
+  float: right;
+  margin-left: 0.5rem;
+  margin-top: 0.25rem;
+  
+}
+
+.app-section-title-group {
+  position: absolute;
+  z-index: 1;
+  padding: 0 2rem;
+}
+
+.app-section-title-group .app-section-title {
+  text-align: left;
+}
+
+.app-section-title-group .app-section-description {
+  color: white;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.36);
+  font-weight: 300;
+  max-width: 70%;
+}
 
 input.ng-invalid.ng-touched {
   outline: 1px solid #DA3637;
@@ -258,11 +319,38 @@ a:hover {
 }
 
 .app-screen-header,
-.app-screen-footer {
-  height: 52px;
+.app-screen-button {
+  height: 56px;
   width: 100%;
   position: fixed;
   z-index: 100;
+}
+
+.app-screen-button {
+  background: #a0f;
+  width: 100%;
+  height: 56px;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  line-height: 56px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.app-screen-button.first-half {
+  position: absolute;
+  width: 50%;
+  left: 0;
+  background: #6A1B9A;
+}
+
+.app-screen-button.second-half {
+  position: absolute;
+  width: 50%;
+  right: 0;
 }
 
 .app-screen-header {
@@ -294,11 +382,11 @@ a:hover {
 
 .hero {
   background-image: url('http://atlanticsentinel.com/wp-content/uploads/2013/02/Seoul-South-Korea-600x400.jpg');
-  height: 200px;
+  height: 260px;
   width: 100%;
   background-size: cover;
   background-position: center;
-  margin-top: -12px;
+/*  margin-top: -12px;*/
 }
 
 .app-screen-main-img img {
@@ -333,8 +421,14 @@ a:hover {
 
 .app-screen-body {
   padding-top: 56px;
+  padding-bottom: 56px;
   background: white;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+#checkins .app-screen-body,
+#checkin-list .app-screen-body {
+  height: auto;
 }
 
 .home .app-screen-body {
@@ -399,10 +493,11 @@ a:hover {
   margin-bottom: 3rem;
 }
 
-#workshops-list .app-section-title {
+#workshops-list .app-section-title,
+#checkin-list h4.app-section-title {
   margin: 0;
   border-bottom: 1px solid #B0BEC5;
-  padding: 1rem;
+  padding: 1rem 0;
   font-size: 1.65rem;
   color: black;
   text-shadow: none;
@@ -413,6 +508,7 @@ a:hover {
   list-style: none;
   padding: 0;
 /*   padding-bottom: 52px; */
+  margin-bottom: 34px;
 }
 
 .workshops-list .number {
@@ -424,11 +520,21 @@ a:hover {
   z-index: 1;
 }
 
+.workshop-prize {
+    font-size: 1rem;
+    float: left;
+    margin-top: 15px;
+    margin-left: 25px;
+    z-index: 1;
+    color: goldenrod;
+}
+
 .workshops-list .number:hover {
   background: #a0f;
 }
 
-.workshop:before {
+.workshop:before,
+.attendee:before {
   content: "";
   width: 10px;
   height: 100%;
@@ -437,11 +543,16 @@ a:hover {
   position: absolute;
 }
 
-.workshop:nth-child(5n+1):before { background: #9C27B0;  } /* starts here - purple */
-.workshop:nth-child(5n+2):before { background: #F44336; } /* red */
-.workshop:nth-child(5n+3):before { background: #FF9800; } /* orange */
-.workshop:nth-child(5n+4):before { background: #00BCD4; } /* cyan */
-.workshop:nth-child(5n):before  { background: #2196F3; } /* blue */
+.workshop:nth-child(5n+1):before, 
+.attendee:nth-child(5n+1):before { background: #9C27B0;  } /* starts here - purple */
+.workshop:nth-child(5n+2):before,
+.attendee:nth-child(5n+2):before { background: #F44336; } /* red */
+.workshop:nth-child(5n+3):before,
+.attendee:nth-child(5n+3):before { background: #FF9800; } /* orange */
+.workshop:nth-child(5n+4):before,
+.attendee:nth-child(5n+4):before { background: #00BCD4; } /* cyan */
+.workshop:nth-child(5n):before,
+.attendee:nth-child(5n):before { background: #2196F3; } /* blue */
 
 .workshop,
 .attendee {
@@ -488,11 +599,13 @@ a:hover {
 .attendee-name {
   font-size: 1.1rem;
   margin: 0;
+  font-weight: 500;
 }
 
 .workshop-date,
 .attendee-email,
-.attendee-membership-date {
+.attendee-membership-date,
+.attendee-date {
   font-size: 0.9rem;
   opacity: 0.7;
   margin-bottom: 0;
@@ -512,6 +625,7 @@ a:hover {
   text-transform: uppercase;
   background: red;
   height: 100%;
+  min-height: 89px;
   width: 64px;
   color: white;
   transition: right 0.3s;
@@ -547,36 +661,6 @@ a:hover {
   top: 1rem;
   left: 1rem;
   color: gray;
-}
-
-.app-screen-footer {
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-.app-screen-button {
-  background: #a0f;
-  width: 100%;
-  height: 52px;
-  display: inline-block;
-  color: white;
-  text-align: center;
-  line-height: 52px;
-}
-
-.app-screen-button.first-half {
-  position: absolute;
-  width: 50%;
-  left: 0;
-  background: #6A1B9A;
-}
-
-.app-screen-button.second-half {
-  position: absolute;
-  width: 50%;
-  right: 0;
 }
 
 .app-overlay {
@@ -670,8 +754,8 @@ a:hover {
   font-size: 1rem;
   line-height: 1.5;
   border: none;
-  border-bottom: 1px solid silver;
-  background: #f1f1f1;
+  border-bottom: 1px solid #B0BEC5;
+  background: #ECEFF1;
 }
 
 .add-form textarea {
@@ -711,4 +795,68 @@ a:hover {
   width: 100%;
   max-width: 100%;
   transform: none;
+}
+
+.speaker-two {
+  padding: 4rem 0;
+  margin-bottom: 112px;
+}
+
+.footer-menu {
+  position: absolute;
+  width: 100%;
+  bottom: 56px;
+  left: 0;
+}
+
+#checkin-screen .footer-menu,
+.app-screen-footer.push-down .footer-menu {
+  bottom: 0;
+}
+
+.footer-menu-buttons {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu-button {
+  flex: 1 1 33%;
+  height: 90px;
+  text-align: center;
+  border-left: 1px solid #CFD8DC;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  background: #90A4AE;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.footer-menu-button:first-child {
+  border: none;
+}
+
+.footer-menu-button:hover {
+  background: #607D8B;
+}
+
+.footer-menu-button a {
+  color: inherit;
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+/*  opacity: 0.5;*/
+}
+
+.footer-menu-button .fa {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.footer-menu-button p {
+  font-size: 0.8rem;
+  opacity: 0.5;
 }

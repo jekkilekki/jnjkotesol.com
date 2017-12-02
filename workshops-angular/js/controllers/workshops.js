@@ -1,6 +1,6 @@
 myApp.controller( 'WorkshopsController',
-                 ['$scope', '$rootScope', '$location', '$routeParams', '$firebaseAuth', '$firebaseArray',
-                 function($scope, $rootScope, $location, $routeParams, $firebaseAuth, $firebaseArray) {
+                 ['$scope', '$rootScope', '$route', '$location', '$routeParams', '$firebaseAuth', '$firebaseArray',
+                 function($scope, $rootScope, $route, $location, $routeParams, $firebaseAuth, $firebaseArray) {
   $scope.message = "Welcome to the JNJ KOTESOL Workshops App.";
 
   var ref = firebase.database().ref();
@@ -9,25 +9,34 @@ myApp.controller( 'WorkshopsController',
   $scope.whichWorkshop = $routeParams.mid;
   $scope.whichUser = $routeParams.uid;
                    
+  $scope.order = 'date'; // for sorting and ordering
+  $scope.direction = 'reverse';
+                   
   // Single Workshop page
   // Testing: http://127.0.0.1:62757/jnjkotesol.com/workshops-angular/#!/single/V9TzErg8ZySsEOxkTkcxfvjFIOD2/L-G2-awvg37zfBRa1KV
   var pagePath = $location.path();
-  if( pagePath == '/single/' + $routeParams.uid + '/' + $routeParams.mid ) {
+  if( pagePath != '/home' && pagePath != '/' && pagePath != '/list' ) {
     firebase.database().ref()
       .child('users').child($scope.whichUser)
       .child('workshops').child($scope.whichWorkshop).once('value').then( function(snapshot) {
 
-         $scope.thisworkshop = snapshot.val();
+         $rootScope.thisworkshop = snapshot.val();
 
     }); // end single
   }
 
-  auth.$onAuthStateChanged( function( authUser ) {
-    if( authUser ) {
-      var workshopsRef = ref.child('users').child(authUser.uid).child('workshops');
+//  auth.$onAuthStateChanged( function( authUser ) {
+//    if( authUser ) {
+//      $scope.whichUser = authUser.uid; V9TzErg8ZySsEOxkTkcxfvjFIOD2
+//      var workshopsRef = ref.child('users').child(authUser.uid).child('workshops');
+      var workshopsRef = ref.child('users').child('V9TzErg8ZySsEOxkTkcxfvjFIOD2').child('workshops');
       var workshopsInfo = $firebaseArray(workshopsRef);
       
       $scope.workshops = workshopsInfo;
+                   
+                   $scope.reloadRoute = function() {
+                     $route.reload();
+                   }
 
       workshopsInfo.$loaded().then(function(data) {
         $rootScope.howManyWorkshops = workshopsInfo.length;
@@ -101,7 +110,7 @@ myApp.controller( 'WorkshopsController',
         workshopsInfo.$remove( key );
       } // deleteWorkshop
 
-    } // authUser
-  }); // onAuthStateChanged
+    //} // authUser
+  //}); // onAuthStateChanged
 
 }]); // myApp.controller

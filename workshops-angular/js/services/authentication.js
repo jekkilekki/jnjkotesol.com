@@ -12,7 +12,7 @@ myApp.factory( 'Authentication',
       var userObj = $firebaseObject(userRef);
       $rootScope.currentUser = userObj;
     } else {
-      $rootScope.currentUser = '';
+      $rootScope.currentUser = 'V9TzErg8ZySsEOxkTkcxfvjFIOD2'; // Default Admin account
     }
   });
                 
